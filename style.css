@@ -17,10 +17,13 @@ body {
   color: #172617;
   background: #f7f4ed;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 img {
   max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -31,16 +34,18 @@ section {
   scroll-margin-top: 90px;
 }
 
+
 /* =========================================================
    HEADER
    ========================================================= */
 
 .top {
   position: relative;
-  z-index: 50;
+  z-index: 100;
   background: #102b12;
-  color: white;
+  color: #fff;
 }
+
 
 /* BARRA PRENOTAZIONI */
 
@@ -56,12 +61,14 @@ section {
   color: #e1c477;
 
   text-align: center;
+
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.2px;
 }
 
-/* NAV */
+
+/* NAVIGAZIONE */
 
 .top nav {
   min-height: 86px;
@@ -70,6 +77,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 30px;
 
   background: #fffdf8;
@@ -78,21 +86,25 @@ section {
   border-bottom: 1px solid #e3dccd;
 }
 
+
 /* LOGO */
 
 .brand {
+  flex: 0 0 auto;
+
   display: flex;
   align-items: center;
-  flex: 0 0 auto;
 }
 
 .brand img {
-  height: 72px !important;
   width: auto !important;
+  height: 72px !important;
+
   max-width: 190px;
-  display: block;
+
   object-fit: contain;
 }
+
 
 /* MENU */
 
@@ -100,14 +112,16 @@ section {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
   gap: 30px;
+
   flex-wrap: wrap;
 }
 
 .links a {
-  text-decoration: none;
-
   color: #173b1b;
+
+  text-decoration: none;
 
   font-size: 12px;
   font-weight: 700;
@@ -123,6 +137,7 @@ section {
   transform: translateY(-1px);
 }
 
+
 /* =========================================================
    HERO
    ========================================================= */
@@ -130,52 +145,75 @@ section {
 .hero {
   position: relative;
 
-  min-height: 555px;
+  min-height: 620px;
 
   display: flex;
   align-items: center;
 
   overflow: hidden;
 
-  background-image: url("hero-concadoro.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* VELO SULL'IMMAGINE */
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+  /*
+    IMPORTANTE:
+    Non utilizziamo hero-concadoro.png come sfondo.
+    L'immagine precedente sembra contenere già testi/prodotti
+    della pagina e causava l'effetto "doppio".
+  */
 
   background:
     linear-gradient(
-      90deg,
-      rgba(255, 252, 244, .96) 0%,
-      rgba(255, 252, 244, .88) 22%,
-      rgba(255, 252, 244, .48) 48%,
-      rgba(255, 252, 244, .08) 75%,
-      rgba(8, 34, 13, .12) 100%
+      110deg,
+      #f8f4e9 0%,
+      #f4efe1 42%,
+      #dce3cf 72%,
+      #b7c5a8 100%
     );
+}
+
+
+/* DECORAZIONE LATO DESTRO */
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  top: -120px;
+  right: -180px;
+
+  width: 720px;
+  height: 720px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(23,59,27,.18) 0%,
+      rgba(23,59,27,.08) 40%,
+      rgba(23,59,27,0) 72%
+    );
+
+  pointer-events: none;
 
   z-index: 1;
 }
+
 
 /* CONTENUTO HERO */
 
 .hero-copy {
   position: relative;
-  z-index: 2;
+
+  z-index: 5;
 
   width: 100%;
   max-width: 1500px;
 
   margin: 0 auto;
 
-  padding: 70px 7vw 75px;
+  padding: 80px 7vw 85px;
 }
+
 
 /* TESTO PICCOLO */
 
@@ -186,24 +224,29 @@ section {
 
   font-size: 11px;
   font-weight: 700;
+
   letter-spacing: 2px;
+
   text-transform: uppercase;
 }
+
 
 /* TITOLO */
 
 .hero-copy h1 {
-  max-width: 720px;
+  max-width: 760px;
 
-  margin: 0 0 22px;
+  margin: 0 0 24px;
+
+  color: #111;
 
   font-family: Georgia, "Times New Roman", serif;
 
-  font-size: clamp(46px, 6vw, 78px);
-  line-height: .98;
-  font-weight: 500;
+  font-size: clamp(48px, 6vw, 82px);
 
-  color: #111;
+  line-height: .98;
+
+  font-weight: 500;
 }
 
 .hero-copy h1 em {
@@ -211,24 +254,29 @@ section {
   font-style: italic;
 }
 
+
 /* TESTO HERO */
 
 .hero-copy > p:not(.eyebrow) {
-  max-width: 620px;
+  max-width: 650px;
 
   margin: 0;
 
   color: #252b25;
 
   font-size: 16px;
-  line-height: 1.65;
+
+  line-height: 1.7;
 }
+
 
 /* PULSANTI */
 
 .buttons {
   display: flex;
+
   align-items: center;
+
   gap: 14px;
 
   margin-top: 30px;
@@ -244,15 +292,16 @@ section {
   border-radius: 5px;
 
   background: #173b1b;
-  color: white;
+  color: #fff;
+
+  border: 1px solid #173b1b;
 
   text-decoration: none;
 
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: .7px;
 
-  border: 1px solid #173b1b;
+  letter-spacing: .7px;
 
   transition:
     background .2s ease,
@@ -263,25 +312,34 @@ section {
 
 .btn:hover {
   background: #0f2b13;
+
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.15);
 }
 
 .btn.ghost {
-  background: rgba(255,255,255,.82);
+  background: rgba(255,255,255,.85);
+
   color: #173b1b;
+
   border-color: #c7b789;
 }
 
 .btn.ghost:hover {
-  background: white;
+  background: #fff;
 }
+
 
 /* =========================================================
    DATI AZIENDA
    ========================================================= */
 
 .stats {
+  position: relative;
+  z-index: 10;
+
   max-width: 1500px;
 
   margin: 0 auto;
@@ -289,8 +347,10 @@ section {
   padding: 18px 6vw;
 
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+
+  gap: 0;
 
   background: #f7f4ed;
 
@@ -298,12 +358,14 @@ section {
 }
 
 .stats > div {
-  min-height: 75px;
+  min-height: 78px;
 
   padding: 10px 18px;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
 
   border-right: 1px solid #ddd5c6;
@@ -319,7 +381,9 @@ section {
   color: #173b1b;
 
   font-family: Georgia, "Times New Roman", serif;
+
   font-size: 28px;
+
   line-height: 1;
 }
 
@@ -331,15 +395,21 @@ section {
   color: #66695f;
 
   font-size: 9px;
+
   font-weight: 700;
+
   letter-spacing: 1px;
 }
+
 
 /* =========================================================
    SEZIONI GENERALI
    ========================================================= */
 
 .section {
+  position: relative;
+  z-index: 5;
+
   max-width: 1500px;
 
   margin: 0 auto;
@@ -357,7 +427,9 @@ section {
   font-family: Georgia, "Times New Roman", serif;
 
   font-size: clamp(35px, 4vw, 55px);
+
   line-height: 1.05;
+
   font-weight: 500;
 }
 
@@ -369,8 +441,10 @@ section {
   color: #4d544c;
 
   font-size: 16px;
+
   line-height: 1.75;
 }
+
 
 /* =========================================================
    CHI SIAMO
@@ -383,6 +457,7 @@ section {
 
 #chi-siamo::after {
   content: "";
+
   display: block;
 
   width: 80px;
@@ -393,11 +468,15 @@ section {
   background: #ae8536;
 }
 
+
 /* =========================================================
    PRODOTTI
    ========================================================= */
 
 .products {
+  position: relative;
+  z-index: 5;
+
   max-width: none;
 
   padding: 70px 4vw 80px;
@@ -412,12 +491,14 @@ section {
 .products > h2,
 .products > .lead {
   max-width: 1450px;
+
   margin-left: auto;
   margin-right: auto;
 }
 
 .products > h2 {
   color: #173b1b;
+
   margin-bottom: 15px;
 }
 
@@ -425,7 +506,8 @@ section {
   margin-bottom: 35px;
 }
 
-/* GRIGLIA */
+
+/* GRIGLIA PRODOTTI */
 
 .grid {
   max-width: 1450px;
@@ -441,7 +523,8 @@ section {
   gap: 12px;
 }
 
-/* CARD */
+
+/* CARD PRODOTTO */
 
 .grid article {
   min-height: 390px;
@@ -449,12 +532,15 @@ section {
   padding: 24px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: flex-start;
 
   background: #fff;
 
   border: 1px solid #e0d9cb;
+
   border-radius: 7px;
 
   overflow: hidden;
@@ -467,7 +553,8 @@ section {
 .grid article:hover {
   transform: translateY(-4px);
 
-  box-shadow: 0 15px 35px rgba(35,45,30,.10);
+  box-shadow:
+    0 15px 35px rgba(35,45,30,.10);
 }
 
 .grid article h3 {
@@ -478,6 +565,7 @@ section {
   font-family: Georgia, "Times New Roman", serif;
 
   font-size: 21px;
+
   line-height: 1.2;
 }
 
@@ -487,8 +575,10 @@ section {
   color: #5b6259;
 
   font-size: 13px;
+
   line-height: 1.65;
 }
+
 
 /* =========================================================
    BOTTIGLIA OLIO
@@ -500,18 +590,20 @@ section {
 
   margin: 0 auto;
 
+  position: relative;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  position: relative;
-
-  border-radius: 15px 15px 22px 22px;
+  border-radius:
+    15px 15px 22px 22px;
 
   background:
     linear-gradient(
       90deg,
-      #050605,
+      #050605 0%,
       #24291f 45%,
       #050605 100%
     );
@@ -537,7 +629,8 @@ section {
 
   transform: translateX(-50%);
 
-  border-radius: 6px 6px 2px 2px;
+  border-radius:
+    6px 6px 2px 2px;
 
   background: #b78b43;
 }
@@ -546,8 +639,9 @@ section {
   padding: 12px;
 }
 
+
 /* =========================================================
-   ICONA PRODOTTO
+   ICONE PRODOTTI
    ========================================================= */
 
 .product-icon {
@@ -557,16 +651,19 @@ section {
   margin: 0 auto;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   background: #faf7ed;
 
   border: 1px solid #e8e0d0;
+
   border-radius: 6px;
 
   font-size: 70px;
 }
+
 
 /* =========================================================
    LIMITED EDITION
@@ -598,12 +695,15 @@ section {
   border-radius: 0;
 
   background-size: contain !important;
+
   background-position: center !important;
+
   background-repeat: no-repeat !important;
 }
 
 .limited h3 {
   color: #d9b25e;
+
   font-style: italic;
 }
 
@@ -621,8 +721,10 @@ section {
 
 .limited .btn:hover {
   background: #c69c4a;
+
   color: #173b1b;
 }
+
 
 /* =========================================================
    SERVIZI
@@ -634,6 +736,7 @@ section {
   padding: 80px 7vw;
 
   background: #102b12;
+
   color: white;
 }
 
@@ -655,7 +758,9 @@ section {
   margin-top: 45px;
 
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
+
   gap: 15px;
 }
 
@@ -665,7 +770,9 @@ section {
   padding: 25px 15px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
@@ -674,9 +781,11 @@ section {
   color: #eee7d8;
 
   border: 1px solid rgba(210,174,89,.35);
+
   border-radius: 6px;
 
   font-family: Georgia, "Times New Roman", serif;
+
   font-size: 17px;
 
   transition:
@@ -684,14 +793,12 @@ section {
     transform .2s ease;
 }
 
-.service-grid span:first-line {
-  font-size: 30px;
-}
-
 .service-grid span:hover {
   background: rgba(255,255,255,.05);
+
   transform: translateY(-3px);
 }
+
 
 /* =========================================================
    CONTATTI
@@ -709,6 +816,7 @@ section {
   color: #4d544c;
 
   font-size: 14px;
+
   line-height: 1.8;
 }
 
@@ -720,11 +828,15 @@ section {
   margin-top: 30px;
 }
 
+
 /* =========================================================
    FOOTER
    ========================================================= */
 
 footer {
+  position: relative;
+  z-index: 10;
+
   padding: 50px 7vw 30px;
 
   background: #102b12;
@@ -736,16 +848,19 @@ footer {
 
 footer img {
   width: 180px !important;
+
   max-width: 70%;
+
   height: auto;
 
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
 }
 
 footer p {
   margin: 8px 0;
 
   font-size: 12px;
+
   line-height: 1.6;
 }
 
@@ -759,6 +874,7 @@ footer small {
   font-size: 10px;
 }
 
+
 /* =========================================================
    TABLET
    ========================================================= */
@@ -766,7 +882,8 @@ footer small {
 @media (max-width: 1050px) {
 
   .top nav {
-    padding: 7px 4vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
 
   .links {
@@ -774,15 +891,19 @@ footer small {
   }
 
   .hero {
-    min-height: 520px;
+    min-height: 560px;
   }
 
   .hero-copy {
-    padding: 65px 5vw;
+    padding:
+      70px
+      5vw
+      75px;
   }
 
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
   .grid article.limited {
@@ -790,17 +911,21 @@ footer small {
   }
 
   .service-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
   .stats {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
   .stats > div:nth-child(2) {
     border-right: 0;
   }
+
 }
+
 
 /* =========================================================
    MOBILE
@@ -812,27 +937,34 @@ footer small {
     overflow-x: hidden;
   }
 
+
   /* HEADER */
 
   .notice {
     min-height: 42px;
 
-    padding: 9px 15px;
+    padding:
+      9px
+      15px;
 
     font-size: 9px;
+
     letter-spacing: .8px;
   }
 
   .top nav {
     min-height: 78px;
 
-    padding: 5px 18px;
+    padding:
+      5px
+      18px;
 
     justify-content: center;
   }
 
   .brand img {
     height: 65px !important;
+
     max-width: 165px;
   }
 
@@ -840,64 +972,74 @@ footer small {
     display: none;
   }
 
+
   /* HERO */
 
   .hero {
     min-height: 650px;
 
-    background-position: 60% center;
-  }
-
-  .hero::before {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(255,252,244,.94) 0%,
-        rgba(255,252,244,.83) 38%,
-        rgba(255,252,244,.28) 72%,
-        rgba(8,34,13,.15) 100%
-      );
+    align-items: stretch;
   }
 
   .hero-copy {
     min-height: 650px;
 
-    padding: 70px 24px 55px;
+    padding:
+      70px
+      24px
+      55px;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
   }
 
   .hero-copy h1 {
-    font-size: clamp(40px, 12vw, 58px);
+    font-size:
+      clamp(
+        40px,
+        12vw,
+        58px
+      );
 
     margin-bottom: 20px;
   }
 
   .hero-copy > p:not(.eyebrow) {
     font-size: 14px;
+
     line-height: 1.6;
   }
 
+
+  /* BOTTONI */
+
   .buttons {
     flex-direction: column;
+
     align-items: stretch;
 
     width: 100%;
   }
 
   .btn {
-    text-align: center;
     width: 100%;
+
+    text-align: center;
   }
+
 
   /* STATS */
 
   .stats {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      1fr 1fr;
 
-    padding: 8px 15px;
+    padding:
+      8px
+      15px;
   }
 
   .stats > div {
@@ -905,7 +1047,8 @@ footer small {
 
     padding: 10px;
 
-    border-right: 1px solid #ddd5c6;
+    border-right:
+      1px solid #ddd5c6;
   }
 
   .stats > div:nth-child(even) {
@@ -920,12 +1063,15 @@ footer small {
     font-size: 8px;
   }
 
-  /* SECTIONS */
+
+  /* SEZIONI */
 
   .section,
   .section.dark,
   .contact {
-    padding: 60px 22px;
+    padding:
+      60px
+      22px;
   }
 
   .section h2 {
@@ -934,13 +1080,17 @@ footer small {
 
   .lead {
     font-size: 14px;
+
     line-height: 1.65;
   }
 
-  /* PRODUCTS */
+
+  /* PRODOTTI */
 
   .products {
-    padding: 55px 15px;
+    padding:
+      55px
+      15px;
   }
 
   .grid {
@@ -979,13 +1129,16 @@ footer small {
   .bottle.black::before {
     width: 37px;
     height: 27px;
+
     top: -21px;
   }
 
-  /* SERVICES */
+
+  /* SERVIZI */
 
   .service-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      1fr 1fr;
 
     gap: 10px;
 
@@ -998,19 +1151,25 @@ footer small {
     font-size: 14px;
   }
 
+
   /* FOOTER */
 
   footer {
-    padding: 40px 22px 25px;
+    padding:
+      40px
+      22px
+      25px;
   }
 
   footer img {
     width: 150px !important;
   }
+
 }
 
+
 /* =========================================================
-   SMALL MOBILE
+   SMARTPHONE PICCOLO
    ========================================================= */
 
 @media (max-width: 420px) {
@@ -1031,7 +1190,9 @@ footer small {
   .stats > div,
   .stats > div:nth-child(even) {
     border-right: 0;
-    border-bottom: 1px solid #ddd5c6;
+
+    border-bottom:
+      1px solid #ddd5c6;
   }
 
   .stats > div:last-child {
@@ -1050,48 +1211,5 @@ footer small {
   .service-grid {
     grid-template-columns: 1fr;
   }
-}
-/* =========================================================
-   CORREZIONE HERO CONCADORO
-   ========================================================= */
 
-.hero {
-  min-height: 680px;
-}
-
-.hero-content {
-  min-height: 680px;
-  padding-top: 55px;
-  padding-bottom: 65px;
-}
-
-.hero-text {
-  position: relative;
-  z-index: 3;
-}
-
-.hero-text h1 {
-  max-width: 700px;
-}
-
-.hero-logo {
-  position: relative;
-  z-index: 3;
-}
-
-.hero-stats {
-  position: relative;
-  z-index: 4;
-}
-
-.products-section {
-  position: relative;
-  z-index: 5;
-  background: #f7f4ed;
-}
-
-/* Evita che elementi della hero finiscano
-   visivamente sopra le sezioni successive */
-.hero {
-  isolation: isolate;
 }
