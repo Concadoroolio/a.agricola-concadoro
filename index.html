@@ -6,10 +6,311 @@
 
   <title>Azienda Agricola Concadoro</title>
 
-  <meta name="description"
-        content="Azienda Agricola Concadoro — Nocellara del Belice, olio extra vergine di oliva, olive da mensa e specialità gourmet.">
+  <meta
+    name="description"
+    content="Azienda Agricola Concadoro — Nocellara del Belice, olio extra vergine di oliva, olive da mensa e specialità gourmet."
+  >
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- CORREZIONI DI LAYOUT -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .top {
+      position: relative !important;
+      z-index: 100;
+    }
+
+    .top nav {
+      position: relative !important;
+      z-index: 101;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 30px !important;
+      min-height: 90px !important;
+    }
+
+    .brand {
+      position: relative !important;
+      z-index: 102;
+      flex: 0 0 auto !important;
+    }
+
+    .brand img {
+      display: block !important;
+      height: 72px !important;
+      width: auto !important;
+      max-width: 220px !important;
+      object-fit: contain !important;
+    }
+
+    .links {
+      position: relative !important;
+      z-index: 102;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      flex-wrap: wrap !important;
+      gap: 24px !important;
+    }
+
+    .links a {
+      position: relative !important;
+      display: inline-block !important;
+      white-space: nowrap !important;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative !important;
+      min-height: 620px !important;
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      overflow: hidden !important;
+    }
+
+    .hero-copy {
+      position: relative !important;
+      z-index: 10 !important;
+      width: min(680px, 100%) !important;
+      margin: 0 !important;
+      padding: 80px 5% !important;
+      display: block !important;
+    }
+
+    .hero-copy .eyebrow,
+    .hero-copy h1,
+    .hero-copy > p:not(.eyebrow),
+    .hero-copy .buttons {
+      position: relative !important;
+      z-index: 11 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .hero-copy h1 {
+      margin-top: 18px !important;
+      margin-bottom: 24px !important;
+      line-height: 1.08 !important;
+      max-width: 650px !important;
+    }
+
+    .hero-copy > p:not(.eyebrow) {
+      max-width: 590px !important;
+      line-height: 1.7 !important;
+      margin-bottom: 30px !important;
+    }
+
+    .buttons {
+      position: relative !important;
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+    }
+
+    .buttons .btn {
+      position: relative !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      white-space: nowrap !important;
+    }
+
+    /* STATISTICHE */
+    .stats {
+      position: relative !important;
+      z-index: 5 !important;
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      width: 100% !important;
+      margin: 0 !important;
+    }
+
+    .stats > div {
+      position: relative !important;
+      min-width: 0 !important;
+    }
+
+    /* SEZIONI */
+    .section {
+      position: relative !important;
+      z-index: 2 !important;
+      overflow: hidden !important;
+    }
+
+    .grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      gap: 24px !important;
+      width: 100% !important;
+    }
+
+    .grid article {
+      position: relative !important;
+      min-width: 0 !important;
+      overflow: hidden !important;
+    }
+
+    .limited {
+      position: relative !important;
+    }
+
+    .service-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      gap: 20px !important;
+    }
+
+    .service-grid > span {
+      position: relative !important;
+      min-width: 0 !important;
+    }
+
+    .contact {
+      position: relative !important;
+    }
+
+    footer {
+      position: relative !important;
+      z-index: 2 !important;
+      text-align: center !important;
+    }
+
+    footer img {
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* TABLET */
+    @media (max-width: 900px) {
+
+      .top nav {
+        flex-direction: column !important;
+        padding: 15px 20px !important;
+      }
+
+      .links {
+        justify-content: center !important;
+        gap: 14px 20px !important;
+      }
+
+      .hero {
+        min-height: 560px !important;
+      }
+
+      .hero-copy {
+        width: 100% !important;
+        padding: 70px 7% !important;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+    }
+
+    /* SMARTPHONE */
+    @media (max-width: 600px) {
+
+      .notice {
+        font-size: 11px !important;
+        padding: 10px 12px !important;
+        text-align: center !important;
+      }
+
+      .top nav {
+        min-height: auto !important;
+        gap: 15px !important;
+        padding: 14px !important;
+      }
+
+      .brand img {
+        height: 60px !important;
+        max-width: 190px !important;
+      }
+
+      .links {
+        width: 100% !important;
+        gap: 10px 15px !important;
+      }
+
+      .links a {
+        font-size: 11px !important;
+      }
+
+      .hero {
+        min-height: 600px !important;
+        align-items: flex-end !important;
+      }
+
+      .hero-copy {
+        width: 100% !important;
+        padding: 50px 22px 55px !important;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(38px, 10vw, 54px) !important;
+      }
+
+      .hero-copy > p:not(.eyebrow) {
+        font-size: 15px !important;
+      }
+
+      .buttons {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+
+      .buttons .btn {
+        width: 100% !important;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      .stats > div {
+        padding: 22px 12px !important;
+        text-align: center !important;
+      }
+
+      .grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      .section {
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -26,7 +327,6 @@
       <img
         src="logo-concadoro.PNG"
         alt="Azienda Agricola Concadoro"
-        style="height:72px;width:auto;display:block;"
       >
     </div>
 
@@ -166,7 +466,6 @@
 
   <div class="grid">
 
-
     <!-- OLIO -->
 
     <article>
@@ -261,11 +560,11 @@
       <div
         class="bottle"
         style="
-          background-image:url('image0.png');
-          background-size:contain;
-          background-position:center;
-          background-repeat:no-repeat;
-          background-color:#173b2a;
+          background-image: url('image0.png');
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: #173b2a;
         "
       >
       </div>
@@ -286,7 +585,6 @@
       </a>
 
     </article>
-
 
   </div>
 
@@ -389,6 +687,7 @@
       class="btn ghost"
       href="https://wa.me/393911246216"
       target="_blank"
+      rel="noopener"
     >
       WHATSAPP
     </a>
@@ -409,7 +708,6 @@
   <img
     src="logo-concadoro.PNG"
     alt="Concadoro"
-    style="width:180px;max-width:70%;margin-bottom:20px;"
   >
 
   <p>
