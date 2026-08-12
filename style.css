@@ -1051,3 +1051,47 @@ footer small {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   CORREZIONE HERO CONCADORO
+   ========================================================= */
+
+.hero {
+  min-height: 680px;
+}
+
+.hero-content {
+  min-height: 680px;
+  padding-top: 55px;
+  padding-bottom: 65px;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-text h1 {
+  max-width: 700px;
+}
+
+.hero-logo {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-stats {
+  position: relative;
+  z-index: 4;
+}
+
+.products-section {
+  position: relative;
+  z-index: 5;
+  background: #f7f4ed;
+}
+
+/* Evita che elementi della hero finiscano
+   visivamente sopra le sezioni successive */
+.hero {
+  isolation: isolate;
+}
