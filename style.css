@@ -1,5 +1,5 @@
 /* =========================================================
-   CONCADORO — STYLE COMPLETO FINALE
+   CONCADORO — STYLE DEFINITIVO HOME
    ========================================================= */
 
 
@@ -22,7 +22,6 @@ body {
   overflow-x: hidden;
 
   background: #f8f5ed;
-
   color: #142219;
 
   font-family:
@@ -54,21 +53,16 @@ a {
 :root {
 
   --green-dark: #123b25;
-
   --green: #17452b;
-
   --green-light: #315d3d;
 
   --cream: #f8f5ed;
-
   --cream-light: #fcfaf5;
 
   --gold: #b98b32;
-
   --gold-light: #d0aa5a;
 
   --text: #142219;
-
   --text-soft: #536057;
 
   --border: #ddd6c7;
@@ -93,13 +87,11 @@ a {
   text-align: center;
 
   font-size: 11px;
-
   font-weight: 700;
 
   letter-spacing: 1.5px;
 
   text-transform: uppercase;
-
 }
 
 
@@ -116,55 +108,43 @@ a {
   background: rgba(252, 250, 245, 0.98);
 
   border-bottom:
-    1px solid rgba(185, 139, 50, 0.25);
+    1px solid rgba(185, 139, 50, 0.2);
 
   z-index: 1000;
-
 }
 
 
-/* NAVIGAZIONE */
-
-.main-nav {
-
-  position: relative;
+.top nav {
 
   width: 100%;
 
   max-width: 1500px;
 
+  min-height: 100px;
+
   margin: 0 auto;
 
-  padding:
-    18px 5vw 17px;
+  padding: 10px 5vw;
 
   display: flex;
 
-  flex-direction: column;
-
   align-items: center;
 
-  justify-content: center;
+  justify-content: space-between;
 
-  gap: 13px;
-
+  gap: 30px;
 }
 
 
-/* =========================================================
-   LOGO CENTRALE
-   ========================================================= */
+/* LOGO CENTRALE */
 
 .brand {
 
-  position: relative;
-
-  z-index: 10;
-
   display: block;
 
-  text-decoration: none;
+  flex: 0 0 auto;
 
+  text-decoration: none;
 }
 
 
@@ -174,18 +154,15 @@ a {
 
   width: auto;
 
-  height: 74px;
+  height: 54px;
 
-  max-width: 190px;
+  max-width: 180px;
 
   object-fit: contain;
-
 }
 
 
-/* =========================================================
-   MENU
-   ========================================================= */
+/* MENU */
 
 .links {
 
@@ -193,12 +170,9 @@ a {
 
   align-items: center;
 
-  justify-content: center;
+  justify-content: flex-end;
 
-  flex-wrap: wrap;
-
-  gap: 27px;
-
+  gap: 28px;
 }
 
 
@@ -208,21 +182,20 @@ a {
 
   display: inline-block;
 
-  padding: 5px 0;
+  padding: 8px 0;
 
   color: var(--green-dark);
 
   text-decoration: none;
 
-  font-size: 11px;
+  font-size: 12px;
 
   font-weight: 700;
 
-  letter-spacing: 1.3px;
+  letter-spacing: 1px;
 
   transition:
     color 0.25s ease;
-
 }
 
 
@@ -233,32 +206,25 @@ a {
   position: absolute;
 
   left: 0;
-
-  bottom: 0;
+  bottom: 2px;
 
   width: 0;
-
   height: 1px;
 
   background: var(--gold);
 
   transition:
     width 0.25s ease;
-
 }
 
 
 .links a:hover {
-
   color: var(--gold);
-
 }
 
 
 .links a:hover::after {
-
   width: 100%;
-
 }
 
 
@@ -276,22 +242,19 @@ a {
 
   min-height: 700px;
 
-  overflow: hidden;
-
   display: flex;
 
   align-items: center;
 
-  background: #d8dfd1;
+  overflow: hidden;
+
+  background: #dce5d5;
 
   z-index: 1;
-
 }
 
 
-/* =========================================================
-   IMMAGINE ULIVETI
-   ========================================================= */
+/* IMMAGINE ULIVETI */
 
 .hero-image {
 
@@ -300,23 +263,19 @@ a {
   inset: 0;
 
   width: 100%;
-
   height: 100%;
+
+  max-width: none;
 
   object-fit: cover;
 
   object-position: center;
 
-  display: block;
-
-  z-index: 0;
-
+  z-index: 1;
 }
 
 
-/* =========================================================
-   OVERLAY HERO
-   ========================================================= */
+/* OVERLAY */
 
 .hero-overlay {
 
@@ -324,67 +283,30 @@ a {
 
   inset: 0;
 
-  z-index: 2;
-
-  pointer-events: none;
-
   background:
 
     linear-gradient(
       90deg,
       rgba(248, 245, 237, 0.98) 0%,
-      rgba(248, 245, 237, 0.92) 28%,
-      rgba(248, 245, 237, 0.66) 48%,
-      rgba(248, 245, 237, 0.22) 72%,
+      rgba(248, 245, 237, 0.90) 30%,
+      rgba(248, 245, 237, 0.58) 55%,
+      rgba(248, 245, 237, 0.15) 82%,
       rgba(248, 245, 237, 0.04) 100%
     );
 
-}
-
-
-/* =========================================================
-   HERO DECORAZIONE
-   ========================================================= */
-
-.hero::after {
-
-  content: "";
-
-  position: absolute;
-
-  right: -180px;
-
-  top: -180px;
-
-  width: 600px;
-
-  height: 600px;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(255,255,255,0.35),
-      rgba(255,255,255,0)
-    );
-
-  z-index: 3;
-
   pointer-events: none;
 
+  z-index: 2;
 }
 
 
-/* =========================================================
-   HERO CONTENUTO
-   ========================================================= */
+/* CONTENUTO HERO */
 
 .hero-copy {
 
   position: relative;
 
-  z-index: 10;
+  z-index: 5;
 
   width: 100%;
 
@@ -394,7 +316,6 @@ a {
 
   padding:
     100px 7vw;
-
 }
 
 
@@ -405,8 +326,7 @@ a {
 
   position: relative;
 
-  z-index: 11;
-
+  z-index: 6;
 }
 
 
@@ -427,7 +347,6 @@ a {
   letter-spacing: 3px;
 
   text-transform: uppercase;
-
 }
 
 
@@ -438,15 +357,13 @@ a {
 h1,
 h2,
 h3 {
-
   margin-top: 0;
-
 }
 
 
 h1 {
 
-  max-width: 900px;
+  max-width: 850px;
 
   margin-bottom: 28px;
 
@@ -465,17 +382,14 @@ h1 {
   line-height: 0.98;
 
   letter-spacing: -3px;
-
 }
 
 
-h1 em,
-h2 em {
+h1 em {
 
   color: var(--green-dark);
 
   font-style: italic;
-
 }
 
 
@@ -498,7 +412,6 @@ h2 {
   line-height: 1.02;
 
   letter-spacing: -2px;
-
 }
 
 
@@ -514,7 +427,6 @@ h3 {
   font-size: 25px;
 
   line-height: 1.15;
-
 }
 
 
@@ -533,12 +445,11 @@ h3 {
   font-size: 17px;
 
   line-height: 1.75;
-
 }
 
 
 /* =========================================================
-   BUTTON
+   BUTTONS
    ========================================================= */
 
 .buttons {
@@ -550,7 +461,6 @@ h3 {
   flex-wrap: wrap;
 
   gap: 14px;
-
 }
 
 
@@ -564,8 +474,7 @@ h3 {
 
   min-height: 50px;
 
-  padding:
-    14px 25px;
+  padding: 14px 25px;
 
   border:
     1px solid var(--green-dark);
@@ -589,7 +498,6 @@ h3 {
     background 0.25s ease,
     color 0.25s ease,
     border-color 0.25s ease;
-
 }
 
 
@@ -598,29 +506,26 @@ h3 {
   transform: translateY(-2px);
 
   background: #0e2f1d;
-
 }
 
 
 .btn.ghost {
 
-  background: rgba(255,255,255,0.3);
+  background: transparent;
 
   color: var(--green-dark);
 
   border-color:
-    rgba(185,139,50,0.7);
-
+    rgba(185, 139, 50, 0.55);
 }
 
 
 .btn.ghost:hover {
 
   background:
-    rgba(185,139,50,0.1);
+    rgba(185, 139, 50, 0.08);
 
   border-color: var(--gold);
-
 }
 
 
@@ -628,11 +533,9 @@ h3 {
 
   min-height: 44px;
 
-  padding:
-    11px 19px;
+  padding: 11px 19px;
 
   font-size: 10px;
-
 }
 
 
@@ -644,7 +547,7 @@ h3 {
 
   position: relative;
 
-  z-index: 20;
+  z-index: 3;
 
   display: grid;
 
@@ -660,7 +563,6 @@ h3 {
 
   border-bottom:
     1px solid var(--border);
-
 }
 
 
@@ -668,8 +570,7 @@ h3 {
 
   min-height: 145px;
 
-  padding:
-    30px 20px;
+  padding: 30px 20px;
 
   display: flex;
 
@@ -683,14 +584,11 @@ h3 {
 
   border-right:
     1px solid var(--border);
-
 }
 
 
 .stat:last-child {
-
   border-right: none;
-
 }
 
 
@@ -710,7 +608,6 @@ h3 {
   font-size: 38px;
 
   font-weight: 400;
-
 }
 
 
@@ -723,7 +620,6 @@ h3 {
   font-weight: 700;
 
   letter-spacing: 1.5px;
-
 }
 
 
@@ -735,7 +631,7 @@ h3 {
 
   position: relative;
 
-  z-index: 5;
+  z-index: 2;
 
   width: 100%;
 
@@ -743,7 +639,6 @@ h3 {
     120px 5vw;
 
   overflow: hidden;
-
 }
 
 
@@ -754,7 +649,6 @@ h3 {
   max-width: 1380px;
 
   margin: 0 auto;
-
 }
 
 
@@ -769,7 +663,6 @@ h3 {
   font-size: 17px;
 
   line-height: 1.85;
-
 }
 
 
@@ -779,22 +672,17 @@ h3 {
 
 .story {
 
-  background: #f8f5ed;
-
+  background: var(--cream);
 }
 
 
 .story h2 {
-
   max-width: 900px;
-
 }
 
 
 .story .lead {
-
   max-width: 900px;
-
 }
 
 
@@ -807,7 +695,6 @@ h3 {
   margin-top: 45px;
 
   background: var(--gold);
-
 }
 
 
@@ -818,27 +705,21 @@ h3 {
 .products {
 
   background: var(--cream-light);
-
 }
 
 
 .products h2 {
-
   margin-bottom: 20px;
-
 }
 
 
 .products > .section-inner > .lead {
 
   margin-bottom: 55px;
-
 }
 
 
-/* =========================================================
-   GRID PRODOTTI
-   ========================================================= */
+/* GRIGLIA */
 
 .grid {
 
@@ -850,9 +731,10 @@ h3 {
   gap: 24px;
 
   width: 100%;
-
 }
 
+
+/* CARD */
 
 .product-card {
 
@@ -876,7 +758,6 @@ h3 {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-
 }
 
 
@@ -885,13 +766,13 @@ h3 {
   transform: translateY(-5px);
 
   box-shadow:
-    0 18px 45px rgba(20,40,25,0.09);
-
+    0 18px 45px
+    rgba(20, 40, 25, 0.09);
 }
 
 
 /* =========================================================
-   AREA VISIVA PRODOTTI
+   IMMAGINI REALI PRODOTTI
    ========================================================= */
 
 .product-visual {
@@ -911,352 +792,56 @@ h3 {
   overflow: hidden;
 
   background:
+
     linear-gradient(
       180deg,
-      #faf8f2,
-      #f1ece0
+      #faf8f2 0%,
+      #f1ede2 100%
     );
-
 }
 
 
-/* =========================================================
-   BOTTIGLIA OLIO
-   ========================================================= */
-
-.bottle-visual {
-
-  overflow: hidden;
-
-}
-
-
-.bottle-cap {
-
-  position: absolute;
-
-  top: 38px;
-
-  width: 53px;
-
-  height: 28px;
-
-  border-radius:
-    5px 5px 2px 2px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #9a7226,
-      #d2a94f,
-      #9a7226
-    );
-
-  z-index: 4;
-
-}
-
-
-.bottle-neck {
-
-  position: absolute;
-
-  top: 60px;
-
-  width: 40px;
-
-  height: 48px;
-
-  border-radius:
-    7px 7px 2px 2px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #0a0e0b,
-      #1d271f,
-      #080c09
-    );
-
-  z-index: 3;
-
-}
-
-
-.bottle-body {
-
-  position: relative;
-
-  width: 145px;
-
-  height: 220px;
-
-  margin-top: 52px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius:
-    19px 19px 28px 28px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #070b08,
-      #172018 45%,
-      #090d0a
-    );
-
-  box-shadow:
-    12px 22px 32px rgba(0,0,0,0.22);
-
-}
-
-
-.bottle-logo {
-
-  width: 96px;
-
-  padding: 8px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border:
-    1px solid rgba(208,170,90,0.75);
-
-}
-
-
-.bottle-logo img {
+.real-image img {
 
   display: block;
-
-  width: 78px;
-
-  height: 78px;
-
-  object-fit: contain;
-
-  filter:
-    brightness(0)
-    saturate(100%)
-    invert(74%)
-    sepia(35%)
-    saturate(800%)
-    hue-rotate(2deg)
-    brightness(90%);
-
-}
-
-
-.bottle-info {
-
-  position: absolute;
-
-  bottom: 17px;
-
-  left: 0;
-
-  width: 100%;
-
-  text-align: center;
-
-  color: #d0aa5a;
-
-  font-size: 7px;
-
-  font-weight: 700;
-
-  letter-spacing: 1px;
-
-}
-
-
-/* =========================================================
-   OLIVE
-   ========================================================= */
-
-.olive-visual {
-
-  background:
-    radial-gradient(
-      circle at 50% 45%,
-      #e4eadc,
-      #f5f1e6 70%
-    );
-
-}
-
-
-.olive-decoration {
-
-  font-size: 92px;
-
-  filter:
-    drop-shadow(
-      10px 15px 12px rgba(0,0,0,0.12)
-    );
-
-}
-
-
-.olive-leaves {
-
-  position: absolute;
-
-  right: 25px;
-
-  bottom: 25px;
-
-  font-size: 45px;
-
-  opacity: 0.55;
-
-}
-
-
-/* =========================================================
-   PATÉ
-   ========================================================= */
-
-.pate-visual {
-
-  background:
-    linear-gradient(
-      180deg,
-      #faf8f2,
-      #eee8db
-    );
-
-}
-
-
-.pate-visual > img {
 
   width: 100%;
 
   height: 100%;
 
+  max-width: none;
+
   object-fit: contain;
 
-  display: block;
+  padding: 18px;
 
+  transition:
+    transform 0.35s ease;
 }
 
 
-.pate-fallback {
+.product-card:hover
+.real-image img {
 
-  background:
-    linear-gradient(
-      135deg,
-      #eee6d5,
-      #f8f5ed
-    );
-
-}
-
-
-.pate-fallback-content {
-
-  display: none;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: 125px;
-
-  height: 145px;
-
-  padding: 15px;
-
-  border-radius:
-    12px 12px 20px 20px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #191d19,
-      #090d0a
-    );
-
-  color: #d0aa5a;
-
-  text-align: center;
-
-  box-shadow:
-    12px 20px 30px rgba(0,0,0,0.18);
-
-}
-
-
-.pate-fallback .pate-fallback-content {
-
-  display: flex;
-
-}
-
-
-.pate-fallback-content span {
-
-  margin-bottom: 9px;
-
-  font-size: 7px;
-
-  letter-spacing: 2px;
-
-}
-
-
-.pate-fallback-content strong {
-
-  font-family:
-    Georgia,
-    serif;
-
-  font-size: 22px;
-
-  font-weight: 400;
-
-}
-
-
-.pate-fallback-content small {
-
-  margin-top: 10px;
-
-  font-size: 6px;
-
-  letter-spacing: 1px;
-
+  transform:
+    scale(1.035);
 }
 
 
 /* =========================================================
-   CONTENUTO PRODOTTI
+   CONTENUTO PRODOTTO
    ========================================================= */
 
 .product-content {
 
   padding:
     27px 26px 30px;
-
 }
 
 
 .product-content h3 {
 
   margin-bottom: 15px;
-
 }
 
 
@@ -1264,15 +849,13 @@ h3 {
 
   min-height: 88px;
 
-  margin:
-    0 0 23px;
+  margin: 0 0 23px;
 
   color: var(--text-soft);
 
   font-size: 14px;
 
   line-height: 1.7;
-
 }
 
 
@@ -1282,32 +865,25 @@ h3 {
 
 .limited {
 
-  background:
-    linear-gradient(
-      150deg,
-      #0b2115,
-      #123b25
-    );
+  background: var(--green-dark);
 
   color: #fff;
 
-  border-color:
-    var(--green-dark);
-
+  border-color: var(--green-dark);
 }
 
 
 .limited:hover {
 
   box-shadow:
-    0 18px 45px rgba(20,60,35,0.25);
-
+    0 18px 45px
+    rgba(20, 60, 35, 0.22);
 }
 
 
 .limited-image {
 
-  position: relative;
+  width: 100%;
 
   height: 320px;
 
@@ -1320,51 +896,34 @@ h3 {
   overflow: hidden;
 
   background:
-    radial-gradient(
-      circle,
-      #274e36,
-      #0c2416
-    );
-
+    #0b2819;
 }
 
 
 .limited-image img {
 
-  position: relative;
-
-  z-index: 2;
+  display: block;
 
   width: 100%;
 
   height: 100%;
 
-  object-fit: contain;
+  max-width: none;
 
-  display: block;
+  object-fit: cover;
 
+  object-position: center;
+
+  transition:
+    transform 0.4s ease;
 }
 
 
-.limited-glow {
+.limited:hover
+.limited-image img {
 
-  position: absolute;
-
-  width: 230px;
-
-  height: 230px;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(208,170,90,0.25),
-      rgba(208,170,90,0)
-    );
-
-  z-index: 1;
-
+  transform:
+    scale(1.025);
 }
 
 
@@ -1372,14 +931,12 @@ h3 {
 
   padding:
     25px 26px 30px;
-
 }
 
 
 .limited-label {
 
-  margin:
-    0 0 10px;
+  margin: 0 0 10px;
 
   color: var(--gold-light);
 
@@ -1391,7 +948,6 @@ h3 {
   font-size: 19px;
 
   font-style: italic;
-
 }
 
 
@@ -1411,29 +967,21 @@ h3 {
   text-transform: uppercase;
 
   letter-spacing: 1px;
-
 }
 
 
-.limited-product {
+.limited-content p {
 
-  min-height: auto !important;
+  min-height: auto;
 
   color:
-    rgba(255,255,255,0.9) !important;
-
+    rgba(255, 255, 255, 0.8);
 }
 
 
 .limited-description {
 
-  min-height: auto !important;
-
   margin-top: 15px !important;
-
-  color:
-    rgba(255,255,255,0.7) !important;
-
 }
 
 
@@ -1445,15 +993,13 @@ h3 {
     var(--gold-light);
 
   color: #fff;
-
 }
 
 
 .limited-button:hover {
 
   background:
-    rgba(255,255,255,0.08);
-
+    rgba(255, 255, 255, 0.08);
 }
 
 
@@ -1463,34 +1009,25 @@ h3 {
 
 .dark {
 
-  background:
-    var(--green-dark);
+  background: var(--green-dark);
 
   color: #fff;
-
 }
 
 
 .dark .eyebrow {
-
-  color:
-    var(--gold-light);
-
+  color: var(--gold-light);
 }
 
 
 .dark h2 {
-
   color: #fff;
-
 }
 
 
 .dark .lead {
-
   color:
     rgba(255,255,255,0.75);
-
 }
 
 
@@ -1504,7 +1041,6 @@ h3 {
   gap: 20px;
 
   margin-top: 55px;
-
 }
 
 
@@ -1512,8 +1048,7 @@ h3 {
 
   min-height: 180px;
 
-  padding:
-    30px 25px;
+  padding: 30px 25px;
 
   display: flex;
 
@@ -1535,7 +1070,6 @@ h3 {
   transition:
     background 0.25s ease,
     border-color 0.25s ease;
-
 }
 
 
@@ -1546,7 +1080,6 @@ h3 {
 
   border-color:
     rgba(209,163,67,0.45);
-
 }
 
 
@@ -1555,7 +1088,6 @@ h3 {
   margin-bottom: 15px;
 
   font-size: 36px;
-
 }
 
 
@@ -1565,23 +1097,18 @@ h3 {
 
 .contact {
 
-  background:
-    #f8f5ed;
-
+  background: var(--cream);
 }
 
 
 .contact-inner {
 
   max-width: 1100px;
-
 }
 
 
 .contact h2 {
-
   margin-bottom: 20px;
-
 }
 
 
@@ -1595,7 +1122,6 @@ h3 {
   gap: 30px;
 
   margin-top: 55px;
-
 }
 
 
@@ -1609,7 +1135,6 @@ h3 {
     1px solid var(--border);
 
   border-radius: 6px;
-
 }
 
 
@@ -1618,40 +1143,29 @@ h3 {
   margin-bottom: 17px;
 
   font-size: 21px;
-
 }
 
 
 .contact-block p {
-
-  color:
-    var(--text-soft);
-
+  color: var(--text-soft);
 }
 
 
 .contact-block a {
 
-  color:
-    var(--green-dark);
+  color: var(--green-dark);
 
   text-decoration: none;
-
 }
 
 
 .contact-block a:hover {
-
-  color:
-    var(--gold);
-
+  color: var(--gold);
 }
 
 
 .contact-buttons {
-
   margin-top: 35px;
-
 }
 
 
@@ -1664,14 +1178,12 @@ h3 {
   gap: 25px;
 
   margin-top: 50px;
-
 }
 
 
 .social-links a {
 
-  color:
-    var(--green-dark);
+  color: var(--green-dark);
 
   text-decoration: none;
 
@@ -1680,15 +1192,11 @@ h3 {
   font-weight: 700;
 
   letter-spacing: 1.5px;
-
 }
 
 
 .social-links a:hover {
-
-  color:
-    var(--gold);
-
+  color: var(--gold);
 }
 
 
@@ -1700,19 +1208,17 @@ footer {
 
   position: relative;
 
-  z-index: 20;
+  z-index: 2;
 
   padding:
     65px 25px 40px;
 
-  background:
-    #102e1e;
+  background: #102e1e;
 
   color:
     rgba(255,255,255,0.72);
 
   text-align: center;
-
 }
 
 
@@ -1722,7 +1228,7 @@ footer img {
 
   width: auto;
 
-  height: 78px;
+  height: 75px;
 
   max-width: 190px;
 
@@ -1730,7 +1236,6 @@ footer img {
     0 auto 25px;
 
   object-fit: contain;
-
 }
 
 
@@ -1739,7 +1244,6 @@ footer p {
   margin: 7px 0;
 
   font-size: 13px;
-
 }
 
 
@@ -1753,7 +1257,6 @@ footer small {
     rgba(255,255,255,0.45);
 
   font-size: 11px;
-
 }
 
 
@@ -1763,11 +1266,29 @@ footer small {
 
 @media (max-width: 1100px) {
 
+  .top nav {
+
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+  .links {
+    gap: 18px;
+  }
+
+
+  .hero-copy {
+
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+
   .grid {
 
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
-
   }
 
 
@@ -1775,16 +1296,6 @@ footer small {
 
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
-
-  }
-
-
-  .hero-copy {
-
-    padding-left: 6vw;
-
-    padding-right: 6vw;
-
   }
 
 }
@@ -1796,42 +1307,54 @@ footer small {
 
 @media (max-width: 800px) {
 
-  .main-nav {
+  .top nav {
+
+    min-height: auto;
 
     padding:
-      14px 20px 17px;
+      15px 20px 18px;
 
+    flex-direction: column;
+
+    gap: 12px;
   }
 
 
   .brand img {
-
-    height: 65px;
-
+    height: 58px;
   }
 
 
   .links {
 
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
     gap:
       8px 18px;
-
   }
 
 
   .links a {
-
     font-size: 10px;
-
   }
 
 
   .hero {
 
-    min-height: 650px;
+    min-height: 620px;
 
     align-items: flex-end;
+  }
 
+
+  .hero-image {
+
+    object-position:
+      center center;
   }
 
 
@@ -1841,19 +1364,17 @@ footer small {
 
       linear-gradient(
         180deg,
-        rgba(248,245,237,0.18) 0%,
-        rgba(248,245,237,0.72) 55%,
+        rgba(248,245,237,0.35) 0%,
+        rgba(248,245,237,0.70) 45%,
         rgba(248,245,237,0.98) 100%
       );
-
   }
 
 
   .hero-copy {
 
     padding:
-      90px 7vw 65px;
-
+      80px 7vw 65px;
   }
 
 
@@ -1861,23 +1382,18 @@ footer small {
 
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
-
   }
 
 
   .stat:nth-child(2) {
-
     border-right: none;
-
   }
 
 
   .stat:nth-child(1),
   .stat:nth-child(2) {
-
     border-bottom:
       1px solid var(--border);
-
   }
 
 
@@ -1885,14 +1401,12 @@ footer small {
 
     padding:
       90px 6vw;
-
   }
 
 
   .contact-details {
 
     grid-template-columns: 1fr;
-
   }
 
 }
@@ -1912,32 +1426,28 @@ footer small {
     font-size: 9px;
 
     letter-spacing: 1px;
-
   }
 
 
-  .main-nav {
+  .top nav {
 
     padding:
       12px 14px 16px;
-
   }
 
 
   .brand img {
 
-    height: 58px;
+    height: 55px;
 
-    max-width: 170px;
-
+    max-width: 175px;
   }
 
 
   .links {
 
     gap:
-      6px 13px;
-
+      7px 13px;
   }
 
 
@@ -1948,7 +1458,6 @@ footer small {
     font-size: 9px;
 
     letter-spacing: 0.8px;
-
   }
 
 
@@ -1956,10 +1465,9 @@ footer small {
 
   .hero {
 
-    min-height: 620px;
+    min-height: 610px;
 
     align-items: flex-end;
-
   }
 
 
@@ -1967,7 +1475,6 @@ footer small {
 
     object-position:
       center center;
-
   }
 
 
@@ -1977,11 +1484,10 @@ footer small {
 
       linear-gradient(
         180deg,
-        rgba(248,245,237,0.18) 0%,
-        rgba(248,245,237,0.66) 42%,
+        rgba(248,245,237,0.45) 0%,
+        rgba(248,245,237,0.82) 45%,
         rgba(248,245,237,0.98) 100%
       );
-
   }
 
 
@@ -1989,7 +1495,6 @@ footer small {
 
     padding:
       70px 22px 50px;
-
   }
 
 
@@ -2000,7 +1505,6 @@ footer small {
     font-size: 9px;
 
     letter-spacing: 2px;
-
   }
 
 
@@ -2012,7 +1516,6 @@ footer small {
       clamp(45px, 13vw, 65px);
 
     letter-spacing: -2px;
-
   }
 
 
@@ -2023,7 +1526,6 @@ footer small {
     font-size: 14px;
 
     line-height: 1.65;
-
   }
 
 
@@ -2034,14 +1536,11 @@ footer small {
     flex-direction: column;
 
     align-items: stretch;
-
   }
 
 
   .buttons .btn {
-
     width: 100%;
-
   }
 
 
@@ -2051,7 +1550,6 @@ footer small {
 
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
-
   }
 
 
@@ -2061,14 +1559,11 @@ footer small {
 
     padding:
       20px 10px;
-
   }
 
 
   .stat strong {
-
     font-size: 30px;
-
   }
 
 
@@ -2077,7 +1572,6 @@ footer small {
     font-size: 8px;
 
     letter-spacing: 1px;
-
   }
 
 
@@ -2087,7 +1581,6 @@ footer small {
 
     padding:
       75px 22px;
-
   }
 
 
@@ -2099,7 +1592,6 @@ footer small {
       clamp(40px, 12vw, 58px);
 
     letter-spacing: -1.5px;
-
   }
 
 
@@ -2108,7 +1600,6 @@ footer small {
     font-size: 14px;
 
     line-height: 1.75;
-
   }
 
 
@@ -2119,14 +1610,18 @@ footer small {
     grid-template-columns: 1fr;
 
     gap: 18px;
-
   }
 
 
   .product-visual {
 
-    height: 280px;
+    height: 300px;
+  }
 
+
+  .real-image img {
+
+    padding: 12px;
   }
 
 
@@ -2134,21 +1629,16 @@ footer small {
 
     padding:
       24px 22px 26px;
-
   }
 
 
   .product-content p {
-
     min-height: auto;
-
   }
 
 
   .limited-image {
-
-    height: 280px;
-
+    height: 300px;
   }
 
 
@@ -2162,7 +1652,6 @@ footer small {
     gap: 12px;
 
     margin-top: 40px;
-
   }
 
 
@@ -2174,14 +1663,11 @@ footer small {
       20px 10px;
 
     font-size: 12px;
-
   }
 
 
   .service-icon {
-
     font-size: 28px;
-
   }
 
 
@@ -2194,15 +1680,12 @@ footer small {
     gap: 15px;
 
     margin-top: 40px;
-
   }
 
 
   .contact-block {
-
     padding:
       23px 20px;
-
   }
 
 
@@ -2213,7 +1696,6 @@ footer small {
     gap: 15px;
 
     margin-top: 35px;
-
   }
 
 
@@ -2223,14 +1705,11 @@ footer small {
 
     padding:
       50px 20px 30px;
-
   }
 
 
   footer img {
-
     height: 70px;
-
   }
 
 }
@@ -2246,28 +1725,21 @@ footer small {
 
     gap:
       6px 10px;
-
   }
 
 
   .links a {
-
     font-size: 8px;
-
   }
 
 
   h1 {
-
     font-size: 43px;
-
   }
 
 
   .service-grid {
-
     grid-template-columns: 1fr;
-
   }
 
 }
