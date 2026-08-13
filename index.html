@@ -12,718 +12,435 @@
   >
 
   <link rel="stylesheet" href="style.css">
-
-  <!-- CORREZIONI DI LAYOUT -->
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      overflow-x: hidden;
-    }
-
-    .top {
-      position: relative !important;
-      z-index: 100;
-    }
-
-    .top nav {
-      position: relative !important;
-      z-index: 101;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 30px !important;
-      min-height: 90px !important;
-    }
-
-    .brand {
-      position: relative !important;
-      z-index: 102;
-      flex: 0 0 auto !important;
-    }
-
-    .brand img {
-      display: block !important;
-      height: 72px !important;
-      width: auto !important;
-      max-width: 220px !important;
-      object-fit: contain !important;
-    }
-
-    .links {
-      position: relative !important;
-      z-index: 102;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: flex-end !important;
-      flex-wrap: wrap !important;
-      gap: 24px !important;
-    }
-
-    .links a {
-      position: relative !important;
-      display: inline-block !important;
-      white-space: nowrap !important;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative !important;
-      min-height: 620px !important;
-      width: 100% !important;
-      display: flex !important;
-      align-items: center !important;
-      overflow: hidden !important;
-    }
-
-    .hero-copy {
-      position: relative !important;
-      z-index: 10 !important;
-      width: min(680px, 100%) !important;
-      margin: 0 !important;
-      padding: 80px 5% !important;
-      display: block !important;
-    }
-
-    .hero-copy .eyebrow,
-    .hero-copy h1,
-    .hero-copy > p:not(.eyebrow),
-    .hero-copy .buttons {
-      position: relative !important;
-      z-index: 11 !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-    }
-
-    .hero-copy h1 {
-      margin-top: 18px !important;
-      margin-bottom: 24px !important;
-      line-height: 1.08 !important;
-      max-width: 650px !important;
-    }
-
-    .hero-copy > p:not(.eyebrow) {
-      max-width: 590px !important;
-      line-height: 1.7 !important;
-      margin-bottom: 30px !important;
-    }
-
-    .buttons {
-      position: relative !important;
-      display: flex !important;
-      align-items: center !important;
-      flex-wrap: wrap !important;
-      gap: 14px !important;
-    }
-
-    .buttons .btn {
-      position: relative !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      white-space: nowrap !important;
-    }
-
-    /* STATISTICHE */
-    .stats {
-      position: relative !important;
-      z-index: 5 !important;
-      display: grid !important;
-      grid-template-columns: repeat(4, 1fr) !important;
-      width: 100% !important;
-      margin: 0 !important;
-    }
-
-    .stats > div {
-      position: relative !important;
-      min-width: 0 !important;
-    }
-
-    /* SEZIONI */
-    .section {
-      position: relative !important;
-      z-index: 2 !important;
-      overflow: hidden !important;
-    }
-
-    .grid {
-      display: grid !important;
-      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-      gap: 24px !important;
-      width: 100% !important;
-    }
-
-    .grid article {
-      position: relative !important;
-      min-width: 0 !important;
-      overflow: hidden !important;
-    }
-
-    .limited {
-      position: relative !important;
-    }
-
-    .service-grid {
-      display: grid !important;
-      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-      gap: 20px !important;
-    }
-
-    .service-grid > span {
-      position: relative !important;
-      min-width: 0 !important;
-    }
-
-    .contact {
-      position: relative !important;
-    }
-
-    footer {
-      position: relative !important;
-      z-index: 2 !important;
-      text-align: center !important;
-    }
-
-    footer img {
-      display: block !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
-    }
-
-    /* TABLET */
-    @media (max-width: 900px) {
-
-      .top nav {
-        flex-direction: column !important;
-        padding: 15px 20px !important;
-      }
-
-      .links {
-        justify-content: center !important;
-        gap: 14px 20px !important;
-      }
-
-      .hero {
-        min-height: 560px !important;
-      }
-
-      .hero-copy {
-        width: 100% !important;
-        padding: 70px 7% !important;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr) !important;
-      }
-
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-      }
-
-      .service-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-      }
-    }
-
-    /* SMARTPHONE */
-    @media (max-width: 600px) {
-
-      .notice {
-        font-size: 11px !important;
-        padding: 10px 12px !important;
-        text-align: center !important;
-      }
-
-      .top nav {
-        min-height: auto !important;
-        gap: 15px !important;
-        padding: 14px !important;
-      }
-
-      .brand img {
-        height: 60px !important;
-        max-width: 190px !important;
-      }
-
-      .links {
-        width: 100% !important;
-        gap: 10px 15px !important;
-      }
-
-      .links a {
-        font-size: 11px !important;
-      }
-
-      .hero {
-        min-height: 600px !important;
-        align-items: flex-end !important;
-      }
-
-      .hero-copy {
-        width: 100% !important;
-        padding: 50px 22px 55px !important;
-      }
-
-      .hero-copy h1 {
-        font-size: clamp(38px, 10vw, 54px) !important;
-      }
-
-      .hero-copy > p:not(.eyebrow) {
-        font-size: 15px !important;
-      }
-
-      .buttons {
-        flex-direction: column !important;
-        align-items: stretch !important;
-      }
-
-      .buttons .btn {
-        width: 100% !important;
-      }
-
-      .stats {
-        grid-template-columns: 1fr 1fr !important;
-      }
-
-      .stats > div {
-        padding: 22px 12px !important;
-        text-align: center !important;
-      }
-
-      .grid {
-        grid-template-columns: 1fr !important;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr 1fr !important;
-      }
-
-      .section {
-        padding-left: 22px !important;
-        padding-right: 22px !important;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-<header class="top">
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-  <div class="notice">
-    PRENOTAZIONI 2027 — RACCOLTA DAL 1 OTTOBRE 2026
-  </div>
+  <header class="top">
 
-  <nav>
-
-    <div class="brand">
-      <img
-        src="logo-concadoro.PNG"
-        alt="Azienda Agricola Concadoro"
-      >
+    <div class="notice">
+      PRENOTAZIONI 2027 — RACCOLTA DAL 1 OTTOBRE 2026
     </div>
 
-    <div class="links">
-      <a href="#home">HOME</a>
-      <a href="#chi-siamo">CHI SIAMO</a>
-      <a href="#prodotti">PRODOTTI</a>
-      <a href="#servizi">SERVIZI</a>
-      <a href="#contatti">CONTATTI</a>
-    </div>
+    <nav>
 
-  </nav>
+      <div class="brand">
+        <a href="#home" aria-label="Azienda Agricola Concadoro">
+          <img
+            src="logo-concadoro.PNG"
+            alt="Azienda Agricola Concadoro"
+          >
+        </a>
+      </div>
 
-</header>
+      <div class="links">
+        <a href="#home">HOME</a>
+        <a href="#chi-siamo">CHI SIAMO</a>
+        <a href="#prodotti">PRODOTTI</a>
+        <a href="#servizi">SERVIZI</a>
+        <a href="#contatti">CONTATTI</a>
+      </div>
 
+    </nav>
 
-<main>
-
-<!-- =========================
-     HOME
-========================= -->
-
-<section id="home" class="hero">
-
-  <div class="hero-copy">
-
-    <p class="eyebrow">
-      AZIENDA AGRICOLA • CASTELVETRANO, SICILIA
-    </p>
-
-    <h1>
-      Eccellenza che nasce<br>
-      <em>dalla nostra terra.</em>
-    </h1>
-
-    <p>
-      A Castelvetrano, più di 6 ettari di uliveti coltivati con passione.
-      Nocellara del Belice, una delle cultivar più pregiate al mondo.
-    </p>
-
-    <div class="buttons">
-
-      <a class="btn" href="#prodotti">
-        SCOPRI I PRODOTTI
-      </a>
-
-      <a class="btn ghost" href="#chi-siamo">
-        LA NOSTRA AZIENDA
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
+  </header>
 
 
-<!-- =========================
-     DATI AZIENDA
-========================= -->
+  <main>
 
-<section class="stats">
+    <!-- =========================
+         HOME
+    ========================== -->
 
-  <div>
-    <strong>6+</strong>
-    <span>ETTARI DI ULIVETI</span>
-  </div>
+    <section id="home" class="hero">
 
-  <div>
-    <strong>1500</strong>
-    <span>PIANTE DI NOCELLARA</span>
-  </div>
+      <div class="hero-copy">
 
-  <div>
-    <strong>100%</strong>
-    <span>ITALIANO</span>
-  </div>
+        <p class="eyebrow">
+          AZIENDA AGRICOLA • CASTELVETRANO, SICILIA
+        </p>
 
-  <div>
-    <strong>2027</strong>
-    <span>PRENOTAZIONI APERTE</span>
-  </div>
+        <h1>
+          Eccellenza che nasce<br>
+          <em>dalla nostra terra.</em>
+        </h1>
 
-</section>
+        <p>
+          A Castelvetrano, più di 6 ettari di uliveti coltivati con passione.
+          Nocellara del Belice, una delle cultivar più pregiate al mondo.
+        </p>
 
+        <div class="buttons">
 
-<!-- =========================
-     CHI SIAMO
-========================= -->
+          <a class="btn" href="#prodotti">
+            SCOPRI I PRODOTTI
+          </a>
 
-<section id="chi-siamo" class="section">
+          <a class="btn ghost" href="#chi-siamo">
+            LA NOSTRA AZIENDA
+          </a>
 
-  <p class="eyebrow">
-    LA NOSTRA STORIA
-  </p>
-
-  <h2>
-    Tradizione agricola,<br>
-    visione contemporanea.
-  </h2>
-
-  <p class="lead">
-    Concadoro nasce a Castelvetrano, nel cuore della Sicilia,
-    con l'obiettivo di valorizzare la Nocellara del Belice
-    attraverso qualità, cura del territorio e una presentazione
-    premium.
-  </p>
-
-  <p class="lead">
-    Ogni fase nasce dal rispetto per la nostra terra:
-    dalla cura degli ulivi alla raccolta manuale,
-    fino alla trasformazione dei nostri prodotti.
-  </p>
-
-</section>
-
-
-<!-- =========================
-     PRODOTTI
-========================= -->
-
-<section id="prodotti" class="section products">
-
-  <p class="eyebrow">
-    LA COLLEZIONE
-  </p>
-
-  <h2>
-    I nostri prodotti
-  </h2>
-
-  <p class="lead">
-    Olio Extra Vergine di Oliva, olive da mensa e specialità
-    artigianali di altissima qualità.
-  </p>
-
-
-  <div class="grid">
-
-    <!-- OLIO -->
-
-    <article>
-
-      <div class="bottle black">
-
-        <div>
-          <div style="font-size:15px;letter-spacing:3px;">
-            AZIENDA AGRICOLA
-          </div>
-
-          <div style="font-size:30px;margin-top:8px;">
-            CONCADORO
-          </div>
-
-          <div style="font-size:12px;margin-top:12px;">
-            OLIO EXTRA VERGINE
-          </div>
         </div>
 
       </div>
 
-      <h3>
-        Olio Extra Vergine di Oliva
-      </h3>
-
-      <p>
-        Nocellara del Belice.<br>
-        Estratto a freddo.<br>
-        100% Italiano.
-      </p>
-
-      <a class="btn" href="#contatti">
-        SCOPRI →
-      </a>
-
-    </article>
+    </section>
 
 
-    <!-- OLIVE -->
+    <!-- =========================
+         DATI AZIENDA
+    ========================== -->
 
-    <article>
+    <section class="stats" aria-label="Dati dell'azienda">
 
-      <div class="product-icon">
-        🫒
+      <div>
+        <strong>6+</strong>
+        <span>ETTARI DI ULIVETI</span>
       </div>
 
-      <h3>
-        Olive da mensa
-      </h3>
-
-      <p>
-        Nocellara del Belice lavorata secondo
-        la tradizione siciliana.
-      </p>
-
-      <a class="btn" href="#contatti">
-        SCOPRI →
-      </a>
-
-    </article>
-
-
-    <!-- SPECIALITÀ -->
-
-    <article>
-
-      <div class="product-icon">
-        ✦
+      <div>
+        <strong>1500</strong>
+        <span>PIANTE DI NOCELLARA</span>
       </div>
 
-      <h3>
-        Paté e Specialità Gourmet
-      </h3>
-
-      <p>
-        Ricette esclusive per esaltare
-        i sapori della nostra terra.
-      </p>
-
-      <a class="btn" href="#contatti">
-        SCOPRI →
-      </a>
-
-    </article>
-
-
-    <!-- LIMITED EDITION -->
-
-    <article class="limited">
-
-      <div
-        class="bottle"
-        style="
-          background-image: url('image0.png');
-          background-size: contain;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-color: #173b2a;
-        "
-      >
+      <div>
+        <strong>100%</strong>
+        <span>ITALIANO</span>
       </div>
 
-      <h3>
-        Limited Edition
-      </h3>
+      <div>
+        <strong>2027</strong>
+        <span>PRENOTAZIONI APERTE</span>
+      </div>
 
-      <p>
-        <strong>15 BOTTIGLIE NUMERATE</strong><br><br>
-        Olio con Oro Edibile<br>
-        250 ml<br><br>
-        Un capolavoro esclusivo.
+    </section>
+
+
+    <!-- =========================
+         CHI SIAMO
+    ========================== -->
+
+    <section id="chi-siamo" class="section">
+
+      <p class="eyebrow">
+        LA NOSTRA STORIA
       </p>
 
-      <a class="btn" href="#contatti">
-        SCOPRI →
-      </a>
+      <h2>
+        Tradizione agricola,<br>
+        visione contemporanea.
+      </h2>
 
-    </article>
+      <p class="lead">
+        Concadoro nasce a Castelvetrano, nel cuore della Sicilia,
+        con l'obiettivo di valorizzare la Nocellara del Belice
+        attraverso qualità, cura del territorio e una presentazione
+        premium.
+      </p>
 
-  </div>
+      <p class="lead">
+        Ogni fase nasce dal rispetto per la nostra terra:
+        dalla cura degli ulivi alla raccolta manuale,
+        fino alla trasformazione dei nostri prodotti.
+      </p>
 
-</section>
-
-
-<!-- =========================
-     SERVIZI
-========================= -->
-
-<section id="servizi" class="section dark">
-
-  <p class="eyebrow">
-    OLTRE I PRODOTTI
-  </p>
-
-  <h2>
-    Servizi agricoli
-  </h2>
-
-  <p class="lead">
-    Mettiamo la nostra esperienza agricola
-    a disposizione di privati e aziende del settore.
-  </p>
-
-  <div class="service-grid">
-
-    <span>
-      🌿<br><br>
-      Potatura uliveti
-    </span>
-
-    <span>
-      🌱<br><br>
-      Fertilizzazione
-    </span>
-
-    <span>
-      🫒<br><br>
-      Impianto di nuovi uliveti
-    </span>
-
-    <span>
-      ✦<br><br>
-      Consulenza agricola
-    </span>
-
-  </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     CONTATTI
-========================= -->
+    <!-- =========================
+         PRODOTTI
+    ========================== -->
 
-<section id="contatti" class="section contact">
+    <section id="prodotti" class="section products">
 
-  <p class="eyebrow">
-    PARLIAMO DI CONCADORO
-  </p>
+      <p class="eyebrow">
+        LA COLLEZIONE
+      </p>
 
-  <h2>
-    Contatti
-  </h2>
+      <h2>
+        I nostri prodotti
+      </h2>
 
-  <p class="lead">
-    Siamo qui per raccontarti la nostra azienda,
-    i nostri prodotti e le prossime raccolte.
-  </p>
+      <p class="lead">
+        Olio Extra Vergine di Oliva, olive da mensa e specialità
+        artigianali di altissima qualità.
+      </p>
 
-  <p>
-    <strong>C.DA MARINELLA</strong><br>
-    Comune di Castelvetrano (TP)<br>
-    Sicilia, Italia
-  </p>
 
-  <p>
-    📞 +39 391 124 6216
-  </p>
+      <div class="grid">
 
-  <p>
-    💬 WhatsApp +39 391 124 6216
-  </p>
+        <!-- =========================
+             OLIO EXTRA VERGINE
+        ========================== -->
 
-  <p>
-    ✉️ concadoroaziendaagricola@gmail.com
-  </p>
+        <article>
 
-  <div class="buttons">
+          <div class="bottle black">
 
-    <a
-      class="btn"
-      href="mailto:concadoroaziendaagricola@gmail.com"
+            <div>
+              <div class="bottle-small">
+                AZIENDA AGRICOLA
+              </div>
+
+              <div class="bottle-name">
+                CONCADORO
+              </div>
+
+              <div class="bottle-type">
+                OLIO EXTRA VERGINE
+              </div>
+            </div>
+
+          </div>
+
+          <h3>
+            Olio Extra Vergine di Oliva
+          </h3>
+
+          <p>
+            Nocellara del Belice.<br>
+            Estratto a freddo.<br>
+            100% Italiano.
+          </p>
+
+          <a class="btn" href="#contatti">
+            SCOPRI →
+          </a>
+
+        </article>
+
+
+        <!-- =========================
+             OLIVE DA MENSA
+        ========================== -->
+
+        <article>
+
+          <div class="product-icon" aria-hidden="true">
+            🫒
+          </div>
+
+          <h3>
+            Olive da mensa
+          </h3>
+
+          <p>
+            Nocellara del Belice lavorata secondo
+            la tradizione siciliana.
+          </p>
+
+          <a class="btn" href="#contatti">
+            SCOPRI →
+          </a>
+
+        </article>
+
+
+        <!-- =========================
+             PATÉ E SPECIALITÀ
+        ========================== -->
+
+        <article>
+
+          <div class="product-icon" aria-hidden="true">
+            ✦
+          </div>
+
+          <h3>
+            Paté e Specialità Gourmet
+          </h3>
+
+          <p>
+            Ricette esclusive per esaltare
+            i sapori della nostra terra.
+          </p>
+
+          <a class="btn" href="#contatti">
+            SCOPRI →
+          </a>
+
+        </article>
+
+
+        <!-- =========================
+             LIMITED EDITION
+        ========================== -->
+
+        <article class="limited">
+
+          <div
+            class="bottle limited-image"
+            style="
+              background-image: url('image0.png');
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-color: #173b2a;
+            "
+            role="img"
+            aria-label="Limited Edition Concadoro con olio e oro edibile"
+          ></div>
+
+          <h3>
+            Limited Edition
+          </h3>
+
+          <p>
+            <strong>15 BOTTIGLIE NUMERATE</strong><br><br>
+            Olio con Oro Edibile<br>
+            250 ml<br><br>
+            Un capolavoro esclusivo.
+          </p>
+
+          <a class="btn" href="#contatti">
+            SCOPRI →
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVIZI
+    ========================== -->
+
+    <section id="servizi" class="section dark">
+
+      <p class="eyebrow">
+        OLTRE I PRODOTTI
+      </p>
+
+      <h2>
+        Servizi agricoli
+      </h2>
+
+      <p class="lead">
+        Mettiamo la nostra esperienza agricola
+        a disposizione di privati e aziende del settore.
+      </p>
+
+      <div class="service-grid">
+
+        <span>
+          🌿<br><br>
+          Potatura uliveti
+        </span>
+
+        <span>
+          🌱<br><br>
+          Fertilizzazione
+        </span>
+
+        <span>
+          🫒<br><br>
+          Impianto di nuovi uliveti
+        </span>
+
+        <span>
+          ✦<br><br>
+          Consulenza agricola
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATTI
+    ========================== -->
+
+    <section id="contatti" class="section contact">
+
+      <p class="eyebrow">
+        PARLIAMO DI CONCADORO
+      </p>
+
+      <h2>
+        Contatti
+      </h2>
+
+      <p class="lead">
+        Siamo qui per raccontarti la nostra azienda,
+        i nostri prodotti e le prossime raccolte.
+      </p>
+
+      <p>
+        <strong>C.DA MARINELLA</strong><br>
+        Comune di Castelvetrano (TP)<br>
+        Sicilia, Italia
+      </p>
+
+      <p>
+        📞 +39 391 124 6216
+      </p>
+
+      <p>
+        💬 WhatsApp +39 391 124 6216
+      </p>
+
+      <p>
+        ✉️ concadoroaziendaagricola@gmail.com
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="btn"
+          href="mailto:concadoroaziendaagricola@gmail.com"
+        >
+          SCRIVICI
+        </a>
+
+        <a
+          class="btn ghost"
+          href="https://wa.me/393911246216"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WHATSAPP
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <img
+      src="logo-concadoro.PNG"
+      alt="Concadoro"
     >
-      SCRIVICI
-    </a>
 
-    <a
-      class="btn ghost"
-      href="https://wa.me/393911246216"
-      target="_blank"
-      rel="noopener"
-    >
-      WHATSAPP
-    </a>
+    <p>
+      Qualità • Tradizione • Eccellenza
+    </p>
 
-  </div>
+    <p>
+      Azienda Agricola Concadoro<br>
+      C.DA MARINELLA, Comune di Castelvetrano (TP)
+    </p>
 
-</section>
+    <small>
+      © 2026 Concadoro Azienda Agricola — Tutti i diritti riservati.
+    </small>
 
-</main>
+  </footer>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-  <img
-    src="logo-concadoro.PNG"
-    alt="Concadoro"
-  >
-
-  <p>
-    Qualità • Tradizione • Eccellenza
-  </p>
-
-  <p>
-    Azienda Agricola Concadoro<br>
-    C.DA MARINELLA, Comune di Castelvetrano (TP)
-  </p>
-
-  <small>
-    © 2026 Concadoro Azienda Agricola — Tutti i diritti riservati.
-  </small>
-
-</footer>
 
 </body>
 </html>
