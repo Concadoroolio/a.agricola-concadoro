@@ -1,1930 +1,708 @@
-/* =========================================================
-   CONCADORO — HOME DEFINITIVA
-   ========================================================= */
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-:root {
+  <title>Azienda Agricola Concadoro</title>
 
-  --green-dark: #123b25;
-  --green: #17452b;
-  --green-light: #315d3d;
+  <meta
+    name="description"
+    content="Azienda Agricola Concadoro — Nocellara del Belice, olio extra vergine di oliva, olive da mensa e specialità gourmet."
+  >
 
-  --cream: #f8f5ed;
-  --cream-light: #fcfaf5;
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  --gold: #b98b32;
-  --gold-light: #d0aa5a;
+<body>
 
-  --text: #142219;
-  --text-soft: #536057;
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
 
-  --border: #ddd6c7;
+  <header class="top">
 
-}
+    <div class="notice">
+      PRENOTAZIONI 2027 — RACCOLTA DAL 1 OTTOBRE 2026
+    </div>
 
+    <nav class="main-nav">
 
-/* =========================================================
-   RESET
-   ========================================================= */
+      <!-- LOGO CENTRALE -->
+      <a
+        class="brand"
+        href="#home"
+        aria-label="Azienda Agricola Concadoro"
+      >
+        <img
+          src="logo-concadoro.PNG"
+          alt="Azienda Agricola Concadoro"
+        >
+      </a>
 
-* {
-  box-sizing: border-box;
-}
+      <!-- MENU -->
+      <div class="links">
 
+        <a href="#home">HOME</a>
+        <a href="#chi-siamo">CHI SIAMO</a>
+        <a href="#prodotti">PRODOTTI</a>
+        <a href="#servizi">SERVIZI</a>
+        <a href="#contatti">CONTATTI</a>
 
-html {
-  scroll-behavior: smooth;
-}
+      </div>
 
+    </nav>
 
-body {
+  </header>
 
-  margin: 0;
-  padding: 0;
 
-  overflow-x: hidden;
+  <main>
 
-  background: var(--cream);
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-  color: var(--text);
+    <section id="home" class="hero">
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+      <!-- IMMAGINE ULIVETI -->
+      <img
+        class="hero-image"
+        src="hero-concadoro.png"
+        alt="Uliveti Concadoro a Castelvetrano"
+      >
 
-  line-height: 1.6;
+      <!-- OVERLAY -->
+      <div class="hero-overlay"></div>
 
-}
+      <!-- TESTO -->
+      <div class="hero-copy">
 
+        <p class="eyebrow">
+          AZIENDA AGRICOLA • CASTELVETRANO, SICILIA
+        </p>
 
-img {
-  max-width: 100%;
-}
+        <h1>
+          Eccellenza che nasce
+          <br>
+          <em>dalla nostra terra.</em>
+        </h1>
 
+        <p class="hero-description">
+          A Castelvetrano, più di 6 ettari di uliveti coltivati
+          con passione. Nocellara del Belice, una delle cultivar
+          più pregiate al mondo.
+        </p>
 
-a {
-  color: inherit;
-}
+        <div class="buttons">
 
+          <a
+            class="btn"
+            href="#prodotti"
+          >
+            SCOPRI I PRODOTTI
+          </a>
 
-a,
-button {
-  -webkit-tap-highlight-color: transparent;
-}
+          <a
+            class="btn ghost"
+            href="#chi-siamo"
+          >
+            LA NOSTRA AZIENDA
+          </a>
 
+        </div>
 
-/* =========================================================
-   NOTICE
-   ========================================================= */
+      </div>
 
-.notice {
+    </section>
 
-  width: 100%;
 
-  padding:
-    9px 20px;
+    <!-- =====================================================
+         STATISTICHE
+    ====================================================== -->
 
-  background:
-    var(--green-dark);
+    <section class="stats">
 
-  color: #fff;
+      <div class="stat">
 
-  text-align: center;
+        <strong>6+</strong>
 
-  font-size: 11px;
+        <span>
+          ETTARI DI ULIVETI
+        </span>
 
-  font-weight: 700;
+      </div>
 
-  letter-spacing: 1.5px;
 
-  text-transform: uppercase;
+      <div class="stat">
 
-}
+        <strong>1500</strong>
 
+        <span>
+          PIANTE DI NOCELLARA
+        </span>
 
-/* =========================================================
-   HEADER — LOGO CENTRATO
-   ========================================================= */
+      </div>
 
-.top {
 
-  position: relative;
+      <div class="stat">
 
-  width: 100%;
+        <strong>100%</strong>
 
-  background:
-    rgba(252,250,245,0.98);
+        <span>
+          ITALIANO
+        </span>
 
-  border-bottom:
-    1px solid rgba(185,139,50,0.22);
+      </div>
 
-  z-index: 1000;
 
-}
+      <div class="stat">
 
+        <strong>2027</strong>
 
-.top nav {
+        <span>
+          PRENOTAZIONI APERTE
+        </span>
 
-  width: 100%;
+      </div>
 
-  max-width: 1500px;
+    </section>
 
-  min-height: 142px;
 
-  margin: 0 auto;
+    <!-- =====================================================
+         CHI SIAMO
+    ====================================================== -->
 
-  padding:
-    15px 30px 13px;
+    <section
+      id="chi-siamo"
+      class="section story"
+    >
 
-  display: flex;
+      <div class="section-inner">
 
-  flex-direction: column;
+        <p class="eyebrow">
+          LA NOSTRA STORIA
+        </p>
 
-  align-items: center;
+        <h2>
+          Tradizione agricola,
+          <br>
+          <em>visione contemporanea.</em>
+        </h2>
 
-  justify-content: center;
+        <p class="lead">
+          Concadoro nasce a Castelvetrano, nel cuore della Sicilia,
+          con l'obiettivo di valorizzare la Nocellara del Belice
+          attraverso qualità, cura del territorio e una presentazione
+          premium.
+        </p>
 
-  gap: 10px;
+        <p class="lead">
+          Ogni fase nasce dal rispetto per la nostra terra:
+          dalla cura degli ulivi alla raccolta manuale,
+          fino alla trasformazione dei nostri prodotti.
+        </p>
 
-}
+        <div class="gold-line"></div>
 
+      </div>
 
-.brand {
+    </section>
 
-  display: block;
 
-  width: auto;
+    <!-- =====================================================
+         PRODOTTI
+    ====================================================== -->
 
-  text-decoration: none;
+    <section
+      id="prodotti"
+      class="section products"
+    >
 
-  line-height: 0;
+      <div class="section-inner">
 
-}
+        <p class="eyebrow">
+          LA COLLEZIONE
+        </p>
 
+        <h2>
+          I nostri prodotti
+        </h2>
 
-.brand img {
+        <p class="lead">
+          Una selezione di prodotti che raccontano la nostra terra:
+          olio extra vergine di oliva, olive da mensa,
+          specialità gourmet e una Limited Edition esclusiva.
+        </p>
 
-  display: block;
 
-  width: auto;
+        <div class="grid">
 
-  height: 62px;
 
-  max-width: 190px;
+          <!-- =================================================
+               OLIO EVO
+          ================================================== -->
 
-  object-fit: contain;
+          <article class="product-card">
 
-}
+            <div class="product-visual bottle-visual">
 
+              <div class="bottle-cap"></div>
 
-.links {
+              <div class="bottle-neck"></div>
 
-  display: flex;
+              <div class="bottle-body">
 
-  align-items: center;
+                <!-- LOGO CONCADORO SULLA BOTTIGLIA -->
+                <div class="bottle-logo">
 
-  justify-content: center;
+                  <img
+                    src="logo-concadoro.PNG"
+                    alt="Concadoro"
+                  >
 
-  flex-wrap: wrap;
+                </div>
 
-  gap:
-    10px 31px;
+                <div class="bottle-info">
+                  OLIO EXTRA VERGINE
+                </div>
 
-}
+              </div>
 
+            </div>
 
-.links a {
+            <div class="product-content">
 
-  position: relative;
+              <h3>
+                Olio Extra Vergine di Oliva
+              </h3>
 
-  display: inline-block;
+              <p>
+                Nocellara del Belice.
+                <br>
+                Estratto a freddo.
+                <br>
+                100% Italiano.
+              </p>
 
-  padding:
-    6px 0;
+              <a
+                class="btn small"
+                href="#contatti"
+              >
+                SCOPRI →
+              </a>
 
-  color:
-    var(--green-dark);
+            </div>
 
-  text-decoration: none;
+          </article>
 
-  font-size: 11px;
 
-  font-weight: 700;
+          <!-- =================================================
+               OLIVE DA MENSA
+          ================================================== -->
 
-  letter-spacing: 1.2px;
+          <article class="product-card">
 
-  transition:
-    color .25s ease;
+            <div class="product-visual olive-visual">
 
-}
+              <div class="olive-decoration">
+                🫒
+              </div>
 
+              <div class="olive-leaves">
+                🌿
+              </div>
 
-.links a::after {
+            </div>
 
-  content: "";
+            <div class="product-content">
 
-  position: absolute;
+              <h3>
+                Olive da mensa
+              </h3>
 
-  left: 0;
+              <p>
+                Nocellara del Belice lavorata secondo
+                la tradizione siciliana.
+              </p>
 
-  bottom: 0;
+              <a
+                class="btn small"
+                href="#contatti"
+              >
+                SCOPRI →
+              </a>
 
-  width: 0;
+            </div>
 
-  height: 1px;
+          </article>
 
-  background:
-    var(--gold);
 
-  transition:
-    width .25s ease;
+          <!-- =================================================
+               PATÉ
+          ================================================== -->
 
-}
+          <article class="product-card">
 
+            <div class="product-visual pate-visual">
 
-.links a:hover,
-.links a.active {
+              <!--
+                Se aggiungi il file:
+                pate-concadoro.png
+                verrà mostrato automaticamente.
+              -->
 
-  color:
-    var(--gold);
+              <img
+                src="pate-concadoro.png"
+                alt="Paté Concadoro"
+                onerror="this.style.display='none'; this.parentElement.classList.add('pate-fallback');"
+              >
 
-}
+              <div class="pate-fallback-content">
 
+                <span>
+                  CONCADORO
+                </span>
 
-.links a:hover::after,
-.links a.active::after {
+                <strong>
+                  PATÉ
+                </strong>
 
-  width: 100%;
+                <small>
+                  SPECIALITÀ GOURMET
+                </small>
 
-}
+              </div>
 
+            </div>
 
-/* =========================================================
-   HERO — IMMAGINE REALE DEGLI ULIVETI
-   ========================================================= */
+            <div class="product-content">
 
-.hero {
+              <h3>
+                Paté e Specialità Gourmet
+              </h3>
 
-  position: relative;
+              <p>
+                Ricette esclusive per esaltare
+                i sapori autentici della nostra terra.
+              </p>
 
-  isolation: isolate;
+              <a
+                class="btn small"
+                href="#contatti"
+              >
+                SCOPRI →
+              </a>
 
-  width: 100%;
+            </div>
 
-  min-height: 720px;
+          </article>
 
-  display: flex;
 
-  align-items: center;
+          <!-- =================================================
+               LIMITED EDITION
+          ================================================== -->
 
-  overflow: hidden;
+          <article class="product-card limited">
 
-  background:
-    #17291e;
+            <div class="limited-image">
 
-  z-index: 1;
+              <img
+                src="image0.png"
+                alt="Limited Edition Concadoro"
+              >
 
-}
+              <div class="limited-glow"></div>
 
+            </div>
 
-.hero-image {
+            <div class="limited-content">
 
-  position: absolute;
+              <p class="limited-label">
+                LIMITED EDITION
+              </p>
 
-  inset: 0;
+              <h3>
+                15 bottiglie numerate
+              </h3>
 
-  width: 100%;
+              <p class="limited-product">
+                Olio con Oro Edibile
+                <br>
+                250 ml
+              </p>
 
-  height: 100%;
+              <p class="limited-description">
+                Un'edizione esclusiva pensata per
+                celebrare l'eccellenza Concadoro.
+              </p>
 
-  max-width: none;
+              <a
+                class="btn small limited-button"
+                href="#contatti"
+              >
+                SCOPRI →
+              </a>
 
-  object-fit: cover;
+            </div>
 
-  object-position: center center;
+          </article>
 
-  display: block;
+        </div>
 
-  z-index: 0;
+      </div>
 
-}
+    </section>
 
 
-.hero-overlay {
+    <!-- =====================================================
+         SERVIZI
+    ====================================================== -->
 
-  position: absolute;
+    <section
+      id="servizi"
+      class="section dark"
+    >
 
-  inset: 0;
+      <div class="section-inner">
 
-  background:
+        <p class="eyebrow">
+          OLTRE I PRODOTTI
+        </p>
 
-    linear-gradient(
-      90deg,
+        <h2>
+          Servizi agricoli
+        </h2>
 
-      rgba(10,25,16,.88) 0%,
+        <p class="lead">
+          Mettiamo la nostra esperienza agricola
+          a disposizione di privati e aziende del settore.
+        </p>
 
-      rgba(15,34,21,.70) 32%,
 
-      rgba(15,34,21,.25) 66%,
+        <div class="service-grid">
 
-      rgba(15,34,21,.08) 100%
-    );
+          <div class="service-item">
 
-  pointer-events: none;
+            <span class="service-icon">
+              🌿
+            </span>
 
-  z-index: 2;
+            <span>
+              Potatura uliveti
+            </span>
 
-}
+          </div>
 
 
-.hero::after {
+          <div class="service-item">
 
-  content: "";
+            <span class="service-icon">
+              🌱
+            </span>
 
-  position: absolute;
+            <span>
+              Fertilizzazione
+            </span>
 
-  inset: 0;
+          </div>
 
-  background:
 
-    linear-gradient(
-      180deg,
+          <div class="service-item">
 
-      rgba(0,0,0,.05),
+            <span class="service-icon">
+              🫒
+            </span>
 
-      rgba(0,0,0,.12)
-    );
+            <span>
+              Impianto di nuovi uliveti
+            </span>
 
-  pointer-events: none;
+          </div>
 
-  z-index: 3;
 
-}
+          <div class="service-item">
 
+            <span class="service-icon">
+              ✦
+            </span>
 
-.hero-copy {
+            <span>
+              Consulenza agricola
+            </span>
 
-  position: relative;
+          </div>
 
-  z-index: 5;
+        </div>
 
-  width: 100%;
+      </div>
 
-  max-width: 1500px;
+    </section>
 
-  margin: 0 auto;
 
-  padding:
-    105px 7vw 100px;
+    <!-- =====================================================
+         CONTATTI
+    ====================================================== -->
 
-}
+    <section
+      id="contatti"
+      class="section contact"
+    >
 
+      <div class="section-inner contact-inner">
 
-.hero-copy .eyebrow,
-.hero-copy h1,
-.hero-copy > p,
-.hero-copy .buttons {
+        <p class="eyebrow">
+          PARLIAMO DI CONCADORO
+        </p>
 
-  position: relative;
+        <h2>
+          Contatti
+        </h2>
 
-  z-index: 6;
+        <p class="lead">
+          Siamo qui per raccontarti la nostra azienda,
+          i nostri prodotti e le prossime raccolte.
+        </p>
 
-}
 
+        <div class="contact-details">
 
-.hero .eyebrow {
 
-  color:
-    var(--gold-light);
+          <div class="contact-block">
 
-}
+            <h3>
+              Dove siamo
+            </h3>
 
+            <p>
+              <strong>C.DA MARINELLA</strong>
+              <br>
+              Comune di Castelvetrano (TP)
+              <br>
+              Sicilia, Italia
+            </p>
 
-.hero h1 {
+          </div>
 
-  max-width: 900px;
 
-  margin:
-    0 0 27px;
+          <div class="contact-block">
 
-  color: #fff;
+            <h3>
+              Contatti
+            </h3>
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+            <p>
+              📞
+              <a href="tel:+393911246216">
+                +39 391 124 6216
+              </a>
+            </p>
 
-  font-size:
-    clamp(55px, 7vw, 104px);
+            <p>
+              💬
+              <a
+                href="https://wa.me/393911246216"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </a>
+            </p>
 
-  font-weight: 400;
+            <p>
+              ✉️
+              <a href="mailto:concadoroaziendaagricola@gmail.com">
+                concadoroaziendaagricola@gmail.com
+              </a>
+            </p>
 
-  line-height: .97;
+          </div>
 
-  letter-spacing: -3px;
+        </div>
 
-}
 
+        <div class="buttons contact-buttons">
 
-.hero h1 em {
+          <a
+            class="btn"
+            href="mailto:concadoroaziendaagricola@gmail.com"
+          >
+            SCRIVICI
+          </a>
 
-  color:
-    #f1e7cf;
+          <a
+            class="btn ghost"
+            href="https://wa.me/393911246216"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WHATSAPP
+          </a>
 
-  font-style: italic;
+        </div>
 
-}
 
+        <div class="social-links">
 
-.hero-description {
+          <a
+            href="https://www.instagram.com/a.agricola.concadoro"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            INSTAGRAM
+          </a>
 
-  max-width: 610px;
+          <a
+            href="https://www.facebook.com/share/18CGSmAWJt/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FACEBOOK
+          </a>
 
-  margin:
-    0 0 34px;
+          <a
+            href="https://www.tiktok.com/@aziendaagricolaconcadoro"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TIKTOK
+          </a>
 
-  color:
-    rgba(255,255,255,.88);
+        </div>
 
-  font-size: 17px;
+      </div>
 
-  line-height: 1.75;
+    </section>
 
-}
+  </main>
 
 
-/* =========================================================
-   TESTI GENERALI
-   ========================================================= */
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
-.eyebrow {
+  <footer>
 
-  margin:
-    0 0 22px;
+    <img
+      src="logo-concadoro.PNG"
+      alt="Concadoro"
+    >
 
-  color:
-    var(--gold);
+    <p>
+      Qualità • Tradizione • Eccellenza
+    </p>
 
-  font-size: 12px;
+    <p>
+      Azienda Agricola Concadoro
+      <br>
+      C.DA MARINELLA, Comune di Castelvetrano (TP)
+    </p>
 
-  font-weight: 700;
+    <small>
+      © 2026 Concadoro Azienda Agricola —
+      Tutti i diritti riservati.
+    </small>
 
-  letter-spacing: 3px;
+  </footer>
 
-  text-transform: uppercase;
-
-}
-
-
-h1,
-h2,
-h3 {
-
-  margin-top: 0;
-
-}
-
-
-h2 {
-
-  margin-bottom: 30px;
-
-  color:
-    var(--green-dark);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:
-    clamp(48px, 6vw, 82px);
-
-  font-weight: 400;
-
-  line-height: 1.02;
-
-  letter-spacing: -2px;
-
-}
-
-
-h3 {
-
-  color:
-    var(--green-dark);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 25px;
-
-  line-height: 1.15;
-
-}
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-.buttons {
-
-  display: flex;
-
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 14px;
-
-}
-
-
-.btn {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 50px;
-
-  padding:
-    14px 25px;
-
-  border:
-    1px solid var(--green-dark);
-
-  border-radius: 3px;
-
-  background:
-    var(--green-dark);
-
-  color: #fff;
-
-  text-decoration: none;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.2px;
-
-  transition:
-
-    transform .25s ease,
-
-    background .25s ease,
-
-    color .25s ease,
-
-    border-color .25s ease;
-
-}
-
-
-.btn:hover {
-
-  transform:
-    translateY(-2px);
-
-  background:
-    #0e2f1d;
-
-}
-
-
-.btn.ghost {
-
-  background:
-    transparent;
-
-  color:
-    var(--green-dark);
-
-  border-color:
-    rgba(185,139,50,.6);
-
-}
-
-
-.btn.ghost.light {
-
-  color: #fff;
-
-  border-color:
-    rgba(255,255,255,.65);
-
-}
-
-
-.btn.ghost:hover,
-.btn.ghost.light:hover {
-
-  background:
-    rgba(185,139,50,.12);
-
-  border-color:
-    var(--gold-light);
-
-}
-
-
-.btn.small {
-
-  min-height: 44px;
-
-  padding:
-    11px 19px;
-
-  font-size: 10px;
-
-}
-
-
-/* =========================================================
-   STATS
-   ========================================================= */
-
-.stats {
-
-  position: relative;
-
-  z-index: 10;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4,minmax(0,1fr));
-
-  width: 100%;
-
-  background:
-    var(--cream-light);
-
-  border-top:
-    1px solid var(--border);
-
-  border-bottom:
-    1px solid var(--border);
-
-}
-
-
-.stat {
-
-  min-height: 145px;
-
-  padding:
-    30px 20px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
-
-  border-right:
-    1px solid var(--border);
-
-}
-
-
-.stat:last-child {
-
-  border-right: none;
-
-}
-
-
-.stat strong {
-
-  display: block;
-
-  margin-bottom: 7px;
-
-  color:
-    var(--green-dark);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 38px;
-
-  font-weight: 400;
-
-}
-
-
-.stat span {
-
-  color:
-    #6b726c;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-
-}
-
-
-/* =========================================================
-   SEZIONI
-   ========================================================= */
-
-.section {
-
-  position: relative;
-
-  z-index: 2;
-
-  width: 100%;
-
-  padding:
-    120px 5vw;
-
-  overflow: hidden;
-
-}
-
-
-.section-inner {
-
-  width: 100%;
-
-  max-width: 1380px;
-
-  margin: 0 auto;
-
-}
-
-
-.section .lead {
-
-  max-width: 850px;
-
-  margin-bottom: 30px;
-
-  color:
-    var(--text-soft);
-
-  font-size: 17px;
-
-  line-height: 1.85;
-
-}
-
-
-.story {
-
-  background:
-    var(--cream);
-
-}
-
-
-.story h2,
-.story .lead {
-
-  max-width: 900px;
-
-}
-
-
-.gold-line {
-
-  width: 90px;
-
-  height: 2px;
-
-  margin-top: 45px;
-
-  background:
-    var(--gold);
-
-}
-
-
-/* =========================================================
-   PRODOTTI
-   ========================================================= */
-
-.products {
-
-  background:
-    var(--cream-light);
-
-}
-
-
-.products h2 {
-
-  margin-bottom: 20px;
-
-}
-
-
-.products > .section-inner > .lead {
-
-  margin-bottom: 55px;
-
-}
-
-
-.grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4,minmax(0,1fr));
-
-  gap: 24px;
-
-  width: 100%;
-
-}
-
-
-.product-card {
-
-  position: relative;
-
-  min-width: 0;
-
-  overflow: hidden;
-
-  display: flex;
-
-  flex-direction: column;
-
-  background: #fff;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 8px;
-
-  transition:
-
-    transform .3s ease,
-
-    box-shadow .3s ease;
-
-}
-
-
-.product-card:hover {
-
-  transform:
-    translateY(-5px);
-
-  box-shadow:
-    0 18px 45px rgba(20,40,25,.09);
-
-}
-
-
-.product-visual {
-
-  position: relative;
-
-  width: 100%;
-
-  height: 320px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  overflow: hidden;
-
-  background:
-
-    linear-gradient(
-      180deg,
-      #faf8f2,
-      #f3efe4
-    );
-
-}
-
-
-.image-visual img {
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: contain;
-
-  display: block;
-
-}
-
-
-.image-fallback {
-
-  display: none;
-
-  text-align: center;
-
-  color:
-    var(--gold);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 23px;
-
-  letter-spacing: 2px;
-
-  line-height: 1.25;
-
-}
-
-
-.image-visual.image-missing .image-fallback {
-
-  display: block;
-
-}
-
-
-/* =========================================================
-   LIMITED EDITION — LUXURY
-   ========================================================= */
-
-.limited {
-
-  background:
-    var(--green-dark);
-
-  color: #fff;
-
-  border-color:
-    var(--green-dark);
-
-}
-
-
-.limited:hover {
-
-  box-shadow:
-    0 18px 45px rgba(20,60,35,.22);
-
-}
-
-
-.limited-image {
-
-  height: 320px;
-
-  background:
-
-    radial-gradient(
-      circle at 50% 45%,
-      rgba(255,255,255,.16),
-      transparent 48%
-    ),
-
-    linear-gradient(
-      145deg,
-      #193c28,
-      #092014
-    );
-
-}
-
-
-.limited-image img {
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: contain;
-
-  display: block;
-
-  filter:
-    drop-shadow(
-      0 18px 20px rgba(0,0,0,.35)
-    );
-
-}
-
-
-.limited-content {
-
-  padding:
-    25px 26px 30px;
-
-}
-
-
-.limited-label {
-
-  margin:
-    0 0 10px;
-
-  color:
-    var(--gold-light);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 19px;
-
-  font-style: italic;
-
-}
-
-
-.limited h3 {
-
-  color: #fff;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1px;
-
-}
-
-
-.limited-content p {
-
-  min-height: auto;
-
-  color:
-    rgba(255,255,255,.8);
-
-}
-
-
-.limited-description {
-
-  margin-top:
-    15px !important;
-
-}
-
-
-.limited-button {
-
-  background:
-    transparent;
-
-  border-color:
-    var(--gold-light);
-
-  color: #fff;
-
-}
-
-
-.limited-button:hover {
-
-  background:
-    rgba(255,255,255,.08);
-
-}
-
-
-/* =========================================================
-   SERVIZI
-   ========================================================= */
-
-.dark {
-
-  background:
-    var(--green-dark);
-
-  color: #fff;
-
-}
-
-
-.dark .eyebrow {
-
-  color:
-    var(--gold-light);
-
-}
-
-
-.dark h2 {
-
-  color: #fff;
-
-}
-
-
-.dark .lead {
-
-  color:
-    rgba(255,255,255,.75);
-
-}
-
-
-.service-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4,minmax(0,1fr));
-
-  gap: 20px;
-
-  margin-top: 55px;
-
-}
-
-
-.service-item {
-
-  min-height: 180px;
-
-  padding:
-    30px 25px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
-
-  border:
-    1px solid rgba(255,255,255,.16);
-
-  color: #fff;
-
-  font-size: 15px;
-
-  transition:
-
-    background .25s ease,
-
-    border-color .25s ease;
-
-}
-
-
-.service-item:hover {
-
-  background:
-    rgba(255,255,255,.05);
-
-  border-color:
-    rgba(209,163,67,.45);
-
-}
-
-
-.service-icon {
-
-  margin-bottom: 15px;
-
-  font-size: 36px;
-
-}
-
-
-/* =========================================================
-   CONTATTI
-   ========================================================= */
-
-.contact {
-
-  background:
-    var(--cream);
-
-}
-
-
-.contact-inner {
-
-  max-width: 1100px;
-
-}
-
-
-.contact h2 {
-
-  margin-bottom: 20px;
-
-}
-
-
-.contact-details {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(2,minmax(0,1fr));
-
-  gap: 30px;
-
-  margin-top: 55px;
-
-}
-
-
-.contact-block {
-
-  padding: 30px;
-
-  background: #fff;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 6px;
-
-}
-
-
-.contact-block h3 {
-
-  margin-bottom: 17px;
-
-  font-size: 21px;
-
-}
-
-
-.contact-block p {
-
-  color:
-    var(--text-soft);
-
-}
-
-
-.contact-block a {
-
-  color:
-    var(--green-dark);
-
-  text-decoration: none;
-
-}
-
-
-.contact-block a:hover {
-
-  color:
-    var(--gold);
-
-}
-
-
-.contact-buttons {
-
-  margin-top: 35px;
-
-}
-
-
-.social-links {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 25px;
-
-  margin-top: 50px;
-
-}
-
-
-.social-links a {
-
-  color:
-    var(--green-dark);
-
-  text-decoration: none;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-
-}
-
-
-.social-links a:hover {
-
-  color:
-    var(--gold);
-
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
-
-  position: relative;
-
-  z-index: 2;
-
-  padding:
-    65px 25px 40px;
-
-  background:
-    #102e1e;
-
-  color:
-    rgba(255,255,255,.72);
-
-  text-align: center;
-
-}
-
-
-footer img {
-
-  display: block;
-
-  width: auto;
-
-  height: 78px;
-
-  max-width: 190px;
-
-  margin:
-    0 auto 25px;
-
-  object-fit: contain;
-
-}
-
-
-footer p {
-
-  margin:
-    7px 0;
-
-  font-size: 13px;
-
-}
-
-
-footer small {
-
-  display: block;
-
-  margin-top: 30px;
-
-  color:
-    rgba(255,255,255,.45);
-
-  font-size: 11px;
-
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 1100px) {
-
-  .links {
-
-    gap:
-      10px 20px;
-
-  }
-
-
-  .hero-copy {
-
-    padding-left:
-      6vw;
-
-    padding-right:
-      6vw;
-
-  }
-
-
-  .grid {
-
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-
-  }
-
-
-  .service-grid {
-
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-
-  }
-
-}
-
-
-/* =========================================================
-   TABLET PICCOLO
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-  .top nav {
-
-    min-height: auto;
-
-    padding:
-      14px 20px 16px;
-
-    gap: 9px;
-
-  }
-
-
-  .brand img {
-
-    height: 58px;
-
-  }
-
-
-  .links {
-
-    width: 100%;
-
-    justify-content: center;
-
-    gap:
-      7px 17px;
-
-  }
-
-
-  .links a {
-
-    font-size: 9px;
-
-  }
-
-
-  .hero {
-
-    min-height: 650px;
-
-    align-items: flex-end;
-
-  }
-
-
-  .hero-image {
-
-    object-position:
-      center center;
-
-  }
-
-
-  .hero-overlay {
-
-    background:
-
-      linear-gradient(
-        180deg,
-
-        rgba(10,25,16,.20) 0%,
-
-        rgba(10,25,16,.52) 45%,
-
-        rgba(10,25,16,.90) 100%
-      );
-
-  }
-
-
-  .hero-copy {
-
-    padding:
-      90px 7vw 65px;
-
-  }
-
-
-  .stats {
-
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-
-  }
-
-
-  .stat:nth-child(2) {
-
-    border-right: none;
-
-  }
-
-
-  .stat:nth-child(1),
-  .stat:nth-child(2) {
-
-    border-bottom:
-      1px solid var(--border);
-
-  }
-
-
-  .section {
-
-    padding:
-      90px 6vw;
-
-  }
-
-
-  .contact-details {
-
-    grid-template-columns:
-      1fr;
-
-  }
-
-}
-
-
-/* =========================================================
-   SMARTPHONE
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-  .notice {
-
-    padding:
-      9px 10px;
-
-    font-size: 9px;
-
-    letter-spacing: 1px;
-
-  }
-
-
-  .top nav {
-
-    padding:
-      11px 14px 14px;
-
-  }
-
-
-  .brand img {
-
-    height: 52px;
-
-    max-width: 165px;
-
-  }
-
-
-  .links {
-
-    gap:
-      5px 12px;
-
-  }
-
-
-  .links a {
-
-    padding:
-      4px 0;
-
-    font-size: 8px;
-
-    letter-spacing: .7px;
-
-  }
-
-
-  .hero {
-
-    min-height: 640px;
-
-  }
-
-
-  .hero-image {
-
-    object-position:
-      center center;
-
-  }
-
-
-  .hero-copy {
-
-    padding:
-      75px 22px 48px;
-
-  }
-
-
-  .hero .eyebrow {
-
-    margin-bottom: 16px;
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-
-  }
-
-
-  .hero h1 {
-
-    margin-bottom: 22px;
-
-    font-size:
-      clamp(45px,13vw,65px);
-
-    letter-spacing: -2px;
-
-  }
-
-
-  .hero-description {
-
-    margin-bottom: 27px;
-
-    font-size: 14px;
-
-    line-height: 1.65;
-
-  }
-
-
-  .buttons {
-
-    width: 100%;
-
-    flex-direction: column;
-
-    align-items: stretch;
-
-  }
-
-
-  .buttons .btn {
-
-    width: 100%;
-
-  }
-
-
-  .stats {
-
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-
-  }
-
-
-  .stat {
-
-    min-height: 125px;
-
-    padding:
-      20px 10px;
-
-  }
-
-
-  .stat strong {
-
-    font-size: 30px;
-
-  }
-
-
-  .stat span {
-
-    font-size: 8px;
-
-    letter-spacing: 1px;
-
-  }
-
-
-  .section {
-
-    padding:
-      75px 22px;
-
-  }
-
-
-  h2 {
-
-    margin-bottom: 22px;
-
-    font-size:
-      clamp(40px,12vw,58px);
-
-    letter-spacing:
-      -1.5px;
-
-  }
-
-
-  .section .lead {
-
-    font-size: 14px;
-
-    line-height: 1.75;
-
-  }
-
-
-  .grid {
-
-    grid-template-columns:
-      1fr;
-
-    gap: 18px;
-
-  }
-
-
-  .product-visual,
-  .limited-image {
-
-    height: 280px;
-
-  }
-
-
-  .product-content {
-
-    padding:
-      24px 22px 26px;
-
-  }
-
-
-  .service-grid {
-
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-
-    gap: 12px;
-
-    margin-top: 40px;
-
-  }
-
-
-  .service-item {
-
-    min-height: 145px;
-
-    padding:
-      20px 10px;
-
-    font-size: 12px;
-
-  }
-
-
-  .service-icon {
-
-    font-size: 28px;
-
-  }
-
-
-  .contact-details {
-
-    grid-template-columns:
-      1fr;
-
-    gap: 15px;
-
-    margin-top: 40px;
-
-  }
-
-
-  .contact-block {
-
-    padding:
-      23px 20px;
-
-  }
-
-
-  .social-links {
-
-    flex-direction: column;
-
-    gap: 15px;
-
-    margin-top: 35px;
-
-  }
-
-
-  footer {
-
-    padding:
-      50px 20px 30px;
-
-  }
-
-
-  footer img {
-
-    height: 68px;
-
-  }
-
-}
-
-
-/* =========================================================
-   SMARTPHONE MOLTO PICCOLO
-   ========================================================= */
-
-@media (max-width: 380px) {
-
-  .links {
-
-    gap:
-      5px 9px;
-
-  }
-
-
-  .links a {
-
-    font-size:
-      7.5px;
-
-  }
-
-
-  .hero h1 {
-
-    font-size:
-      43px;
-
-  }
-
-
-  .service-grid {
-
-    grid-template-columns:
-      1fr;
-
-  }
-
-}
+</body>
+</html>
