@@ -1,6 +1,5 @@
 /* =========================================================
-   CONCADORO — STYLE COMPLETO
-   VERSIONE FINALE HOME
+   CONCADORO — STYLE COMPLETO FINALE
    ========================================================= */
 
 
@@ -19,9 +18,11 @@ html {
 body {
   margin: 0;
   padding: 0;
+
   overflow-x: hidden;
 
   background: #f8f5ed;
+
   color: #142219;
 
   font-family:
@@ -53,16 +54,21 @@ a {
 :root {
 
   --green-dark: #123b25;
+
   --green: #17452b;
+
   --green-light: #315d3d;
 
   --cream: #f8f5ed;
+
   --cream-light: #fcfaf5;
 
   --gold: #b98b32;
+
   --gold-light: #d0aa5a;
 
   --text: #142219;
+
   --text-soft: #536057;
 
   --border: #ddd6c7;
@@ -87,6 +93,7 @@ a {
   text-align: center;
 
   font-size: 11px;
+
   font-weight: 700;
 
   letter-spacing: 1.5px;
@@ -116,6 +123,8 @@ a {
 }
 
 
+/* NAVIGAZIONE */
+
 .main-nav {
 
   position: relative;
@@ -124,28 +133,21 @@ a {
 
   max-width: 1500px;
 
-  min-height: 105px;
-
   margin: 0 auto;
 
-  padding: 12px 5vw;
+  padding:
+    18px 5vw 17px;
 
-  display: grid;
+  display: flex;
 
-  grid-template-columns:
-    1fr auto 1fr;
+  flex-direction: column;
 
   align-items: center;
 
-  gap: 30px;
+  justify-content: center;
 
-}
+  gap: 13px;
 
-
-/* SINISTRA VUOTA */
-
-.nav-side-left {
-  min-width: 0;
 }
 
 
@@ -153,28 +155,28 @@ a {
    LOGO CENTRALE
    ========================================================= */
 
-.brand-center {
+.brand {
+
+  position: relative;
+
+  z-index: 10;
 
   display: block;
 
   text-decoration: none;
 
-  line-height: 0;
-
-  justify-self: center;
-
 }
 
 
-.brand-center img {
+.brand img {
 
   display: block;
 
   width: auto;
 
-  height: 76px;
+  height: 74px;
 
-  max-width: 180px;
+  max-width: 190px;
 
   object-fit: contain;
 
@@ -191,9 +193,11 @@ a {
 
   align-items: center;
 
-  justify-content: flex-end;
+  justify-content: center;
 
-  gap: 25px;
+  flex-wrap: wrap;
+
+  gap: 27px;
 
 }
 
@@ -204,7 +208,7 @@ a {
 
   display: inline-block;
 
-  padding: 8px 0;
+  padding: 5px 0;
 
   color: var(--green-dark);
 
@@ -214,7 +218,7 @@ a {
 
   font-weight: 700;
 
-  letter-spacing: 1px;
+  letter-spacing: 1.3px;
 
   transition:
     color 0.25s ease;
@@ -230,7 +234,7 @@ a {
 
   left: 0;
 
-  bottom: 2px;
+  bottom: 0;
 
   width: 0;
 
@@ -278,7 +282,7 @@ a {
 
   align-items: center;
 
-  background: #dce5d5;
+  background: #d8dfd1;
 
   z-index: 1;
 
@@ -286,7 +290,7 @@ a {
 
 
 /* =========================================================
-   FOTO ULIVETI
+   IMMAGINE ULIVETI
    ========================================================= */
 
 .hero-image {
@@ -295,24 +299,23 @@ a {
 
   inset: 0;
 
-  background-image:
-    url("./hero-concadoro.png");
+  width: 100%;
 
-  background-size: cover;
+  height: 100%;
 
-  background-position: center center;
+  object-fit: cover;
 
-  background-repeat: no-repeat;
+  object-position: center;
 
-  transform: scale(1.01);
+  display: block;
 
-  z-index: 1;
+  z-index: 0;
 
 }
 
 
 /* =========================================================
-   HERO OVERLAY
+   OVERLAY HERO
    ========================================================= */
 
 .hero-overlay {
@@ -321,19 +324,20 @@ a {
 
   inset: 0;
 
+  z-index: 2;
+
+  pointer-events: none;
+
   background:
+
     linear-gradient(
       90deg,
       rgba(248, 245, 237, 0.98) 0%,
       rgba(248, 245, 237, 0.92) 28%,
-      rgba(248, 245, 237, 0.70) 48%,
-      rgba(248, 245, 237, 0.22) 73%,
-      rgba(248, 245, 237, 0.05) 100%
+      rgba(248, 245, 237, 0.66) 48%,
+      rgba(248, 245, 237, 0.22) 72%,
+      rgba(248, 245, 237, 0.04) 100%
     );
-
-  pointer-events: none;
-
-  z-index: 2;
 
 }
 
@@ -352,33 +356,35 @@ a {
 
   top: -180px;
 
-  width: 620px;
+  width: 600px;
 
-  height: 620px;
+  height: 600px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      rgba(255,255,255,0.32) 0%,
-      rgba(255,255,255,0) 70%
+      rgba(255,255,255,0.35),
+      rgba(255,255,255,0)
     );
 
-  pointer-events: none;
-
   z-index: 3;
+
+  pointer-events: none;
 
 }
 
 
 /* =========================================================
-   HERO COPY
+   HERO CONTENUTO
    ========================================================= */
 
 .hero-copy {
 
   position: relative;
+
+  z-index: 10;
 
   width: 100%;
 
@@ -387,9 +393,7 @@ a {
   margin: 0 auto;
 
   padding:
-    90px 7vw;
-
-  z-index: 5;
+    100px 7vw;
 
 }
 
@@ -401,7 +405,7 @@ a {
 
   position: relative;
 
-  z-index: 6;
+  z-index: 11;
 
 }
 
@@ -412,12 +416,11 @@ a {
 
 .eyebrow {
 
-  margin:
-    0 0 22px;
+  margin: 0 0 22px;
 
   color: var(--gold);
 
-  font-size: 11px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -466,7 +469,8 @@ h1 {
 }
 
 
-h1 em {
+h1 em,
+h2 em {
 
   color: var(--green-dark);
 
@@ -522,8 +526,7 @@ h3 {
 
   max-width: 600px;
 
-  margin:
-    0 0 32px;
+  margin: 0 0 32px;
 
   color: #243129;
 
@@ -601,12 +604,12 @@ h3 {
 
 .btn.ghost {
 
-  background: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.3);
 
   color: var(--green-dark);
 
   border-color:
-    rgba(185,139,50,0.65);
+    rgba(185,139,50,0.7);
 
 }
 
@@ -614,10 +617,9 @@ h3 {
 .btn.ghost:hover {
 
   background:
-    rgba(185,139,50,0.10);
+    rgba(185,139,50,0.1);
 
-  border-color:
-    var(--gold);
+  border-color: var(--gold);
 
 }
 
@@ -635,14 +637,14 @@ h3 {
 
 
 /* =========================================================
-   STATS
+   STATISTICHE
    ========================================================= */
 
 .stats {
 
   position: relative;
 
-  z-index: 10;
+  z-index: 20;
 
   display: grid;
 
@@ -651,8 +653,7 @@ h3 {
 
   width: 100%;
 
-  background:
-    var(--cream-light);
+  background: var(--cream-light);
 
   border-top:
     1px solid var(--border);
@@ -734,7 +735,7 @@ h3 {
 
   position: relative;
 
-  z-index: 2;
+  z-index: 5;
 
   width: 100%;
 
@@ -773,13 +774,12 @@ h3 {
 
 
 /* =========================================================
-   STORY
+   CHI SIAMO
    ========================================================= */
 
 .story {
 
-  background:
-    #f8f5ed;
+  background: #f8f5ed;
 
 }
 
@@ -806,8 +806,7 @@ h3 {
 
   margin-top: 45px;
 
-  background:
-    var(--gold);
+  background: var(--gold);
 
 }
 
@@ -818,8 +817,7 @@ h3 {
 
 .products {
 
-  background:
-    var(--cream-light);
+  background: var(--cream-light);
 
 }
 
@@ -838,14 +836,18 @@ h3 {
 }
 
 
-.product-grid {
+/* =========================================================
+   GRID PRODOTTI
+   ========================================================= */
+
+.grid {
 
   display: grid;
 
   grid-template-columns:
     repeat(4, minmax(0, 1fr));
 
-  gap: 22px;
+  gap: 24px;
 
   width: 100%;
 
@@ -880,27 +882,25 @@ h3 {
 
 .product-card:hover {
 
-  transform:
-    translateY(-5px);
+  transform: translateY(-5px);
 
   box-shadow:
-    0 18px 45px
-    rgba(20,40,25,0.09);
+    0 18px 45px rgba(20,40,25,0.09);
 
 }
 
 
 /* =========================================================
-   PRODUCT IMAGE
+   AREA VISIVA PRODOTTI
    ========================================================= */
 
-.product-image {
+.product-visual {
 
   position: relative;
 
   width: 100%;
 
-  height: 330px;
+  height: 320px;
 
   display: flex;
 
@@ -914,13 +914,231 @@ h3 {
     linear-gradient(
       180deg,
       #faf8f2,
-      #f1ede2
+      #f1ece0
     );
 
 }
 
 
-.product-image > img {
+/* =========================================================
+   BOTTIGLIA OLIO
+   ========================================================= */
+
+.bottle-visual {
+
+  overflow: hidden;
+
+}
+
+
+.bottle-cap {
+
+  position: absolute;
+
+  top: 38px;
+
+  width: 53px;
+
+  height: 28px;
+
+  border-radius:
+    5px 5px 2px 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #9a7226,
+      #d2a94f,
+      #9a7226
+    );
+
+  z-index: 4;
+
+}
+
+
+.bottle-neck {
+
+  position: absolute;
+
+  top: 60px;
+
+  width: 40px;
+
+  height: 48px;
+
+  border-radius:
+    7px 7px 2px 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0a0e0b,
+      #1d271f,
+      #080c09
+    );
+
+  z-index: 3;
+
+}
+
+
+.bottle-body {
+
+  position: relative;
+
+  width: 145px;
+
+  height: 220px;
+
+  margin-top: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius:
+    19px 19px 28px 28px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #070b08,
+      #172018 45%,
+      #090d0a
+    );
+
+  box-shadow:
+    12px 22px 32px rgba(0,0,0,0.22);
+
+}
+
+
+.bottle-logo {
+
+  width: 96px;
+
+  padding: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid rgba(208,170,90,0.75);
+
+}
+
+
+.bottle-logo img {
+
+  display: block;
+
+  width: 78px;
+
+  height: 78px;
+
+  object-fit: contain;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(74%)
+    sepia(35%)
+    saturate(800%)
+    hue-rotate(2deg)
+    brightness(90%);
+
+}
+
+
+.bottle-info {
+
+  position: absolute;
+
+  bottom: 17px;
+
+  left: 0;
+
+  width: 100%;
+
+  text-align: center;
+
+  color: #d0aa5a;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   OLIVE
+   ========================================================= */
+
+.olive-visual {
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      #e4eadc,
+      #f5f1e6 70%
+    );
+
+}
+
+
+.olive-decoration {
+
+  font-size: 92px;
+
+  filter:
+    drop-shadow(
+      10px 15px 12px rgba(0,0,0,0.12)
+    );
+
+}
+
+
+.olive-leaves {
+
+  position: absolute;
+
+  right: 25px;
+
+  bottom: 25px;
+
+  font-size: 45px;
+
+  opacity: 0.55;
+
+}
+
+
+/* =========================================================
+   PATÉ
+   ========================================================= */
+
+.pate-visual {
+
+  background:
+    linear-gradient(
+      180deg,
+      #faf8f2,
+      #eee8db
+    );
+
+}
+
+
+.pate-visual > img {
 
   width: 100%;
 
@@ -933,30 +1151,98 @@ h3 {
 }
 
 
-/* =========================================================
-   CATEGORIA PRODOTTO
-   ========================================================= */
+.pate-fallback {
 
-.product-category {
+  background:
+    linear-gradient(
+      135deg,
+      #eee6d5,
+      #f8f5ed
+    );
 
-  margin:
-    0 0 10px;
+}
 
-  color: var(--gold);
 
-  font-size: 9px !important;
+.pate-fallback-content {
 
-  font-weight: 700;
+  display: none;
 
-  letter-spacing: 1.5px;
+  flex-direction: column;
 
-  text-transform: uppercase;
+  align-items: center;
+
+  justify-content: center;
+
+  width: 125px;
+
+  height: 145px;
+
+  padding: 15px;
+
+  border-radius:
+    12px 12px 20px 20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #191d19,
+      #090d0a
+    );
+
+  color: #d0aa5a;
+
+  text-align: center;
+
+  box-shadow:
+    12px 20px 30px rgba(0,0,0,0.18);
+
+}
+
+
+.pate-fallback .pate-fallback-content {
+
+  display: flex;
+
+}
+
+
+.pate-fallback-content span {
+
+  margin-bottom: 9px;
+
+  font-size: 7px;
+
+  letter-spacing: 2px;
+
+}
+
+
+.pate-fallback-content strong {
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 22px;
+
+  font-weight: 400;
+
+}
+
+
+.pate-fallback-content small {
+
+  margin-top: 10px;
+
+  font-size: 6px;
+
+  letter-spacing: 1px;
 
 }
 
 
 /* =========================================================
-   PRODUCT CONTENT
+   CONTENUTO PRODOTTI
    ========================================================= */
 
 .product-content {
@@ -991,342 +1277,17 @@ h3 {
 
 
 /* =========================================================
-   FALLBACK BOTTIGLIA OLIO
-   ========================================================= */
-
-.oil-fallback {
-
-  position: absolute;
-
-  inset: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-}
-
-
-.oil-cap {
-
-  position: absolute;
-
-  top: 42px;
-
-  width: 43px;
-
-  height: 27px;
-
-  border-radius:
-    5px 5px 2px 2px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #8e6723,
-      #d0aa5a,
-      #8e6723
-    );
-
-  z-index: 2;
-
-}
-
-
-.oil-bottle {
-
-  position: relative;
-
-  width: 125px;
-
-  height: 230px;
-
-  margin-top: 25px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius:
-    16px 16px 25px 25px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #080d0a,
-      #182119 45%,
-      #070b08
-    );
-
-  box-shadow:
-    12px 20px 30px
-    rgba(0,0,0,0.22);
-
-}
-
-
-.oil-label {
-
-  width: 95px;
-
-  padding:
-    17px 8px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  text-align: center;
-
-  color: #d0aa5a;
-
-  border:
-    1px solid rgba(208,170,90,0.5);
-
-}
-
-
-.oil-label span {
-
-  font-size: 7px;
-
-  letter-spacing: 1.8px;
-
-}
-
-
-.oil-label strong {
-
-  margin-top: 7px;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 19px;
-
-  font-weight: 400;
-
-}
-
-
-.oil-label small {
-
-  margin-top: 9px;
-
-  font-size: 6px;
-
-  letter-spacing: 1px;
-
-}
-
-
-/* =========================================================
-   OLIVE DISPLAY
-   ========================================================= */
-
-.olives-image {
-
-  background:
-    radial-gradient(
-      circle at center,
-      #fdfbf6,
-      #e8e4d7
-    );
-
-}
-
-
-.olive-display {
-
-  position: relative;
-
-  width: 180px;
-
-  height: 180px;
-
-}
-
-
-.olive {
-
-  position: absolute;
-
-  left: 40px;
-
-  top: 55px;
-
-  font-size: 70px;
-
-  transform:
-    rotate(-20deg);
-
-}
-
-
-.olive-two {
-
-  left: 90px;
-
-  top: 25px;
-
-  transform:
-    rotate(15deg);
-
-}
-
-
-.olive-three {
-
-  left: 70px;
-
-  top: 85px;
-
-  transform:
-    rotate(35deg);
-
-}
-
-
-/* =========================================================
-   FALLBACK PATÉ
-   ========================================================= */
-
-.pate-fallback {
-
-  position: absolute;
-
-  inset: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-}
-
-
-.pate-jar {
-
-  position: relative;
-
-  width: 160px;
-
-  height: 190px;
-
-  margin-top: 25px;
-
-  border-radius:
-    15px 15px 28px 28px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #d0b477,
-      #c4a663 50%,
-      #aa8c4e
-    );
-
-  box-shadow:
-    12px 18px 30px
-    rgba(0,0,0,0.18);
-
-}
-
-
-.pate-lid {
-
-  position: absolute;
-
-  top: -20px;
-
-  left: -3px;
-
-  width: 166px;
-
-  height: 28px;
-
-  border-radius: 8px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #171717,
-      #050505
-    );
-
-}
-
-
-.pate-label {
-
-  position: absolute;
-
-  left: 20px;
-
-  right: 20px;
-
-  top: 55px;
-
-  height: 95px;
-
-  padding: 10px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  background:
-    #0c0c0c;
-
-  color:
-    #d0aa5a;
-
-}
-
-
-.pate-label img {
-
-  width: 72px;
-
-  height: 58px;
-
-  object-fit: contain;
-
-  margin-bottom: 4px;
-
-}
-
-
-.pate-label span {
-
-  font-size: 7px;
-
-  letter-spacing: 1px;
-
-}
-
-
-/* =========================================================
    LIMITED EDITION
    ========================================================= */
 
-.limited-card {
+.limited {
 
   background:
-    var(--green-dark);
+    linear-gradient(
+      150deg,
+      #0b2115,
+      #123b25
+    );
 
   color: #fff;
 
@@ -1336,11 +1297,10 @@ h3 {
 }
 
 
-.limited-card:hover {
+.limited:hover {
 
   box-shadow:
-    0 18px 50px
-    rgba(20,60,35,0.25);
+    0 18px 45px rgba(20,60,35,0.25);
 
 }
 
@@ -1349,7 +1309,7 @@ h3 {
 
   position: relative;
 
-  height: 330px;
+  height: 320px;
 
   display: flex;
 
@@ -1362,9 +1322,8 @@ h3 {
   background:
     radial-gradient(
       circle,
-      #294c35 0%,
-      #123b25 55%,
-      #0c2b1b 100%
+      #274e36,
+      #0c2416
     );
 
 }
@@ -1374,6 +1333,8 @@ h3 {
 
   position: relative;
 
+  z-index: 2;
+
   width: 100%;
 
   height: 100%;
@@ -1382,8 +1343,6 @@ h3 {
 
   display: block;
 
-  z-index: 2;
-
 }
 
 
@@ -1391,17 +1350,17 @@ h3 {
 
   position: absolute;
 
-  width: 220px;
+  width: 230px;
 
-  height: 220px;
+  height: 230px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      rgba(208,170,90,0.23),
-      transparent 70%
+      rgba(208,170,90,0.25),
+      rgba(208,170,90,0)
     );
 
   z-index: 1;
@@ -1422,8 +1381,7 @@ h3 {
   margin:
     0 0 10px;
 
-  color:
-    var(--gold-light);
+  color: var(--gold-light);
 
   font-family:
     Georgia,
@@ -1437,7 +1395,7 @@ h3 {
 }
 
 
-.limited-card h3 {
+.limited h3 {
 
   color: #fff;
 
@@ -1457,52 +1415,36 @@ h3 {
 }
 
 
-.limited-card .limited-number {
+.limited-product {
 
-  min-height: auto;
-
-  margin-bottom: 10px;
+  min-height: auto !important;
 
   color:
-    var(--gold-light);
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.5px;
-
-}
-
-
-.limited-card .limited-content > p {
-
-  min-height: auto;
-
-  color:
-    rgba(255,255,255,0.82);
+    rgba(255,255,255,0.9) !important;
 
 }
 
 
 .limited-description {
 
-  margin-top:
-    15px !important;
+  min-height: auto !important;
+
+  margin-top: 15px !important;
+
+  color:
+    rgba(255,255,255,0.7) !important;
 
 }
 
 
 .limited-button {
 
-  background:
-    transparent;
+  background: transparent;
 
   border-color:
     var(--gold-light);
 
-  color:
-    #fff;
+  color: #fff;
 
 }
 
@@ -1524,8 +1466,7 @@ h3 {
   background:
     var(--green-dark);
 
-  color:
-    #fff;
+  color: #fff;
 
 }
 
@@ -1540,8 +1481,7 @@ h3 {
 
 .dark h2 {
 
-  color:
-    #fff;
+  color: #fff;
 
 }
 
@@ -1559,7 +1499,7 @@ h3 {
   display: grid;
 
   grid-template-columns:
-    repeat(4, minmax(0,1fr));
+    repeat(4, minmax(0, 1fr));
 
   gap: 20px;
 
@@ -1588,8 +1528,7 @@ h3 {
   border:
     1px solid rgba(255,255,255,0.16);
 
-  color:
-    #fff;
+  color: #fff;
 
   font-size: 15px;
 
@@ -1634,16 +1573,14 @@ h3 {
 
 .contact-inner {
 
-  max-width:
-    1100px;
+  max-width: 1100px;
 
 }
 
 
 .contact h2 {
 
-  margin-bottom:
-    20px;
+  margin-bottom: 20px;
 
 }
 
@@ -1653,7 +1590,7 @@ h3 {
   display: grid;
 
   grid-template-columns:
-    repeat(2,minmax(0,1fr));
+    repeat(2, minmax(0, 1fr));
 
   gap: 30px;
 
@@ -1666,25 +1603,21 @@ h3 {
 
   padding: 30px;
 
-  background:
-    #fff;
+  background: #fff;
 
   border:
     1px solid var(--border);
 
-  border-radius:
-    6px;
+  border-radius: 6px;
 
 }
 
 
 .contact-block h3 {
 
-  margin-bottom:
-    17px;
+  margin-bottom: 17px;
 
-  font-size:
-    21px;
+  font-size: 21px;
 
 }
 
@@ -1702,8 +1635,7 @@ h3 {
   color:
     var(--green-dark);
 
-  text-decoration:
-    none;
+  text-decoration: none;
 
 }
 
@@ -1718,25 +1650,20 @@ h3 {
 
 .contact-buttons {
 
-  margin-top:
-    35px;
+  margin-top: 35px;
 
 }
 
 
 .social-links {
 
-  display:
-    flex;
+  display: flex;
 
-  flex-wrap:
-    wrap;
+  flex-wrap: wrap;
 
-  gap:
-    25px;
+  gap: 25px;
 
-  margin-top:
-    50px;
+  margin-top: 50px;
 
 }
 
@@ -1746,17 +1673,13 @@ h3 {
   color:
     var(--green-dark);
 
-  text-decoration:
-    none;
+  text-decoration: none;
 
-  font-size:
-    11px;
+  font-size: 11px;
 
-  font-weight:
-    700;
+  font-weight: 700;
 
-  letter-spacing:
-    1.5px;
+  letter-spacing: 1.5px;
 
 }
 
@@ -1775,11 +1698,9 @@ h3 {
 
 footer {
 
-  position:
-    relative;
+  position: relative;
 
-  z-index:
-    2;
+  z-index: 20;
 
   padding:
     65px 25px 40px;
@@ -1790,59 +1711,48 @@ footer {
   color:
     rgba(255,255,255,0.72);
 
-  text-align:
-    center;
+  text-align: center;
 
 }
 
 
 footer img {
 
-  display:
-    block;
+  display: block;
 
-  width:
-    auto;
+  width: auto;
 
-  height:
-    80px;
+  height: 78px;
 
-  max-width:
-    190px;
+  max-width: 190px;
 
   margin:
     0 auto 25px;
 
-  object-fit:
-    contain;
+  object-fit: contain;
 
 }
 
 
 footer p {
 
-  margin:
-    7px 0;
+  margin: 7px 0;
 
-  font-size:
-    13px;
+  font-size: 13px;
 
 }
 
 
 footer small {
 
-  display:
-    block;
+  display: block;
 
-  margin-top:
-    30px;
+  margin-top: 30px;
 
   color:
     rgba(255,255,255,0.45);
 
-  font-size:
-    11px;
+  font-size: 11px;
 
 }
 
@@ -1853,40 +1763,10 @@ footer small {
 
 @media (max-width: 1100px) {
 
-  .main-nav {
-
-    padding-left:
-      30px;
-
-    padding-right:
-      30px;
-
-  }
-
-
-  .links {
-
-    gap:
-      17px;
-
-  }
-
-
-  .hero-copy {
-
-    padding-left:
-      6vw;
-
-    padding-right:
-      6vw;
-
-  }
-
-
-  .product-grid {
+  .grid {
 
     grid-template-columns:
-      repeat(2,minmax(0,1fr));
+      repeat(2, minmax(0, 1fr));
 
   }
 
@@ -1894,7 +1774,16 @@ footer small {
   .service-grid {
 
     grid-template-columns:
-      repeat(2,minmax(0,1fr));
+      repeat(2, minmax(0, 1fr));
+
+  }
+
+
+  .hero-copy {
+
+    padding-left: 6vw;
+
+    padding-right: 6vw;
 
   }
 
@@ -1909,53 +1798,20 @@ footer small {
 
   .main-nav {
 
-    min-height:
-      auto;
-
     padding:
-      12px 20px 15px;
-
-    display:
-      flex;
-
-    flex-direction:
-      column;
-
-    gap:
-      12px;
+      14px 20px 17px;
 
   }
 
 
-  .nav-side-left {
+  .brand img {
 
-    display:
-      none;
-
-  }
-
-
-  .brand-center img {
-
-    height:
-      62px;
-
-    max-width:
-      160px;
+    height: 65px;
 
   }
 
 
   .links {
-
-    width:
-      100%;
-
-    justify-content:
-      center;
-
-    flex-wrap:
-      wrap;
 
     gap:
       8px 18px;
@@ -1965,19 +1821,16 @@ footer small {
 
   .links a {
 
-    font-size:
-      10px;
+    font-size: 10px;
 
   }
 
 
   .hero {
 
-    min-height:
-      650px;
+    min-height: 650px;
 
-    align-items:
-      flex-end;
+    align-items: flex-end;
 
   }
 
@@ -1985,10 +1838,11 @@ footer small {
   .hero-overlay {
 
     background:
+
       linear-gradient(
         180deg,
-        rgba(248,245,237,0.35) 0%,
-        rgba(248,245,237,0.75) 45%,
+        rgba(248,245,237,0.18) 0%,
+        rgba(248,245,237,0.72) 55%,
         rgba(248,245,237,0.98) 100%
       );
 
@@ -1998,7 +1852,7 @@ footer small {
   .hero-copy {
 
     padding:
-      75px 7vw 65px;
+      90px 7vw 65px;
 
   }
 
@@ -2006,15 +1860,14 @@ footer small {
   .stats {
 
     grid-template-columns:
-      repeat(2,minmax(0,1fr));
+      repeat(2, minmax(0, 1fr));
 
   }
 
 
   .stat:nth-child(2) {
 
-    border-right:
-      none;
+    border-right: none;
 
   }
 
@@ -2038,8 +1891,7 @@ footer small {
 
   .contact-details {
 
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
 
   }
 
@@ -2057,11 +1909,9 @@ footer small {
     padding:
       9px 10px;
 
-    font-size:
-      9px;
+    font-size: 9px;
 
-    letter-spacing:
-      1px;
+    letter-spacing: 1px;
 
   }
 
@@ -2074,13 +1924,11 @@ footer small {
   }
 
 
-  .brand-center img {
+  .brand img {
 
-    height:
-      58px;
+    height: 58px;
 
-    max-width:
-      150px;
+    max-width: 170px;
 
   }
 
@@ -2088,21 +1936,18 @@ footer small {
   .links {
 
     gap:
-      7px 13px;
+      6px 13px;
 
   }
 
 
   .links a {
 
-    padding:
-      4px 0;
+    padding: 4px 0;
 
-    font-size:
-      9px;
+    font-size: 9px;
 
-    letter-spacing:
-      0.8px;
+    letter-spacing: 0.8px;
 
   }
 
@@ -2111,16 +1956,17 @@ footer small {
 
   .hero {
 
-    min-height:
-      620px;
+    min-height: 620px;
+
+    align-items: flex-end;
 
   }
 
 
   .hero-image {
 
-    background-position:
-      58% center;
+    object-position:
+      center center;
 
   }
 
@@ -2128,11 +1974,12 @@ footer small {
   .hero-overlay {
 
     background:
+
       linear-gradient(
         180deg,
-        rgba(248,245,237,0.45) 0%,
-        rgba(248,245,237,0.80) 45%,
-        rgba(248,245,237,0.99) 100%
+        rgba(248,245,237,0.18) 0%,
+        rgba(248,245,237,0.66) 42%,
+        rgba(248,245,237,0.98) 100%
       );
 
   }
@@ -2148,74 +1995,69 @@ footer small {
 
   .eyebrow {
 
-    margin-bottom:
-      16px;
+    margin-bottom: 16px;
 
-    font-size:
-      9px;
+    font-size: 9px;
 
-    letter-spacing:
-      2px;
+    letter-spacing: 2px;
 
   }
 
 
   h1 {
 
-    margin-bottom:
-      22px;
+    margin-bottom: 22px;
 
     font-size:
-      clamp(45px,13vw,65px);
+      clamp(45px, 13vw, 65px);
 
-    letter-spacing:
-      -2px;
+    letter-spacing: -2px;
 
   }
 
 
   .hero-description {
 
-    margin-bottom:
-      27px;
+    margin-bottom: 27px;
 
-    font-size:
-      14px;
+    font-size: 14px;
 
-    line-height:
-      1.65;
+    line-height: 1.65;
 
   }
 
 
   .buttons {
 
-    width:
-      100%;
+    width: 100%;
 
-    flex-direction:
-      column;
+    flex-direction: column;
 
-    align-items:
-      stretch;
+    align-items: stretch;
 
   }
 
 
   .buttons .btn {
 
-    width:
-      100%;
+    width: 100%;
 
   }
 
 
   /* STATS */
 
+  .stats {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+  }
+
+
   .stat {
 
-    min-height:
-      125px;
+    min-height: 125px;
 
     padding:
       20px 10px;
@@ -2225,19 +2067,16 @@ footer small {
 
   .stat strong {
 
-    font-size:
-      30px;
+    font-size: 30px;
 
   }
 
 
   .stat span {
 
-    font-size:
-      8px;
+    font-size: 8px;
 
-    letter-spacing:
-      1px;
+    letter-spacing: 1px;
 
   }
 
@@ -2254,46 +2093,39 @@ footer small {
 
   h2 {
 
-    margin-bottom:
-      22px;
+    margin-bottom: 22px;
 
     font-size:
-      clamp(40px,12vw,58px);
+      clamp(40px, 12vw, 58px);
 
-    letter-spacing:
-      -1.5px;
+    letter-spacing: -1.5px;
 
   }
 
 
   .section .lead {
 
-    font-size:
-      14px;
+    font-size: 14px;
 
-    line-height:
-      1.75;
+    line-height: 1.75;
 
   }
 
 
   /* PRODOTTI */
 
-  .product-grid {
+  .grid {
 
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
 
-    gap:
-      18px;
+    gap: 18px;
 
   }
 
 
-  .product-image {
+  .product-visual {
 
-    height:
-      300px;
+    height: 280px;
 
   }
 
@@ -2308,16 +2140,14 @@ footer small {
 
   .product-content p {
 
-    min-height:
-      auto;
+    min-height: auto;
 
   }
 
 
   .limited-image {
 
-    height:
-      300px;
+    height: 280px;
 
   }
 
@@ -2327,35 +2157,30 @@ footer small {
   .service-grid {
 
     grid-template-columns:
-      repeat(2,minmax(0,1fr));
+      repeat(2, minmax(0, 1fr));
 
-    gap:
-      12px;
+    gap: 12px;
 
-    margin-top:
-      40px;
+    margin-top: 40px;
 
   }
 
 
   .service-item {
 
-    min-height:
-      145px;
+    min-height: 145px;
 
     padding:
       20px 10px;
 
-    font-size:
-      12px;
+    font-size: 12px;
 
   }
 
 
   .service-icon {
 
-    font-size:
-      28px;
+    font-size: 28px;
 
   }
 
@@ -2364,14 +2189,11 @@ footer small {
 
   .contact-details {
 
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
 
-    gap:
-      15px;
+    gap: 15px;
 
-    margin-top:
-      40px;
+    margin-top: 40px;
 
   }
 
@@ -2386,14 +2208,11 @@ footer small {
 
   .social-links {
 
-    flex-direction:
-      column;
+    flex-direction: column;
 
-    gap:
-      15px;
+    gap: 15px;
 
-    margin-top:
-      35px;
+    margin-top: 35px;
 
   }
 
@@ -2410,8 +2229,7 @@ footer small {
 
   footer img {
 
-    height:
-      70px;
+    height: 70px;
 
   }
 
@@ -2434,24 +2252,21 @@ footer small {
 
   .links a {
 
-    font-size:
-      8px;
+    font-size: 8px;
 
   }
 
 
   h1 {
 
-    font-size:
-      43px;
+    font-size: 43px;
 
   }
 
 
   .service-grid {
 
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
 
   }
 
